@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Kiryl Misachenka](https://up.htmlacademy.ru/htmlcss/20/user/504279).
-* Наставник: [Никита Дубко](https://htmlacademy.ru/profile/id345007).
+* Наставник: [Никита Дубко](https://up.htmlacademy.ru/htmlcss/20/user/345007).
 
 ---
 
