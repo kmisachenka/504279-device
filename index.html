@@ -1,293 +1,421 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
-  	<header class="main-header">
-  		<a href="#">Device</a>
-  		<nav class="service-nav">  			
-  			<ul class="service-nav__wrapper">
-  				<li class="service-nav__search">
-  					<label for="search">
-		  				<span class="service-nav___search_icon"></span>
-		  			</label>
-		  			<input class="service-nav__search_field" type="search" name="search" placeholder="Поиск по сайту">
-		  			<button class="service-nav__search_button" type="submit">Поиск</button>
-  				</li>
-  				<li class="service-nav__login">
-  					<span class="service-nav__login_icon"></span>
-  					<a href="#">Войти</a>
-  				</li>
-  				<li class="service-nav__compare">
-  					<span class="service-nav__compare_icon"></span>
-  					<a href="#">Сравнить</a>
-  				</li>
-  				<li class="service-nav__cart">
-  					<span class="service-nav__cart_icon"></span>
-  					<a href="#">Корзина</a>
-  				</li>
-  			</ul>  			
-  		</nav>
-  		<nav class="main_nav">
-  			<ul class="main_nav__wrapper">
-  				<li class="main_nav__catalog">
-  					<a href="catalog.html">Каталог товаров</a>
-  					<span class="main_nav__catalog_icon"></span>
-  					<ul class="main_nav__submenu">
-  						<li class="main_nav__submenu-item">
-  							<a href="#">Виртуальная реальность</a>
-  						</li>
-  						<li class="main_nav__submenu-item">
-  							<a href="#">Экшн-камеры</a>
-  						</li>
-  						<li class="main_nav__submenu-item">
-  							<a href="#">Фитнес-браслеты</a>
-  						</li>
-  						<li class="main_nav__submenu-item">
-  							<a href="#">Умные часы</a>
-  						</li>
-  						<li class="main_nav__submenu-item">
-  							<a href="#">Квадрокоптеры</a>
-  						</li>
-  					</ul>
-  				</li>
-  				<li class="main_nav__delivery">
-  					<a href="#">Доставка</a>
-  				</li>
-  				<li class="main_nav__warranty">
-  					<a href="#">Гарантия</a>
-  				</li>
-  				<li class="main_nav__contacts">
-  					<a href="#">Контакты</a>
-  				</li>
-  			</ul>
-  		</nav>
-  	</header>
+    <title>Девайс</title>
+</head>
+<body>
+<header class="header">
+    <div class="header-logo">
+        <a href="#" class="header-logo__link">Device</a>
+    </div>
+    <div class="header-search">
+        <input class="header-search__input" type="search" name="search" placeholder="Поиск по сайту">
+        <button class="header-search__button" type="submit">Поиск</button>
+    </div>
 
-  	<main>
-  		<section class="slider">
-  			<div class="slider_controls">
-  				<input type="radio" name="slider_control_1" checked>
-  				<input type="radio" name="slider_control_2">
-  				<input type="radio" name="slider_control_2">
-  			</div>
-  			<div class="slider_item">
-  				<span class="slider_item__index">01</span>
-  				<img class="slider-item__image" src="http://placehold.it/230x384" height="384px" width="230px">
-  				<b class="slider_item__lead">Делай селфи, как Бен Стиллер!</b>
-  				<p class="slider_item__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-  				<a href="#" class="slider_item__more">Подробнее</a>
-  				<table class="slider_item__params">
-  					<tr>
-  						<td>Длина палки</td>
-  						<td>8,5 м</td>
-  					</tr>
-  					<tr>
-  						<td>Вес палки</td>
-  						<td>8,5 м</td>
-  					</tr>
-  					<tr>
-  						<td>Материал</td>
-  						<td>Карбон</td>
-  					</tr>
-  				</table>
-  			</div>
-  			<div class="slider_item">
-  				<span class="slider_item__index">02</span>
-  				<img class="slider-item__image" src="http://placehold.it/230x384" height="384px" width="230px">
-  				<b class="slider_item__lead">Худеем правильно!</b>
-  				<p class="slider_item__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-  				<a href="#" class="slider_item__more">Подробнее</a>
-  				<table class="slider_item__params">
-  					<tr>
-  						<td>Без подзарядки</td>
-  						<td>48 часов</td>
-  					</tr>
-  				</table>
-  			</div>
-  			<div class="slider_item">
-  				<span class="slider_item__index">03</span>
-  				<img class="slider-item__image" src="http://placehold.it/230x384" height="384px" width="230px">
-  				<b class="slider_item__lead">Порхает как бабочка, жалит как пчела!</b>
-  				<p class="slider_item__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-				</p>
-  				<a href="#" class="slider_item__more">Подробнее</a>
-  				<table class="slider_item__params">
-  					<tr>
-  						<td>Дальность полета</td>
-  						<td>800 м</td>
-  					</tr>
-  					<tr>
-  						<td>Радиус поражения</td>
-  						<td>50 м</td>
-  					</tr>
-  				</table>
-  			</div>
-  		</section>
-  		<article class="popular_categories">
-  			<ul class="popular_munu">
-  				<li class="popular_menu__item">
-  					<span class="popular_menu__item-image"></span>
-  					<a href="#">Виртуальная реальность</a>
-  				</li>
-  				<li class="popular_menu__item">
-  					<span class="popular_menu__item-image"></span>
-  					<a href="#">Моноподы для селфи</a>
-  				</li>
-  				<li class="popular_menu__item">
-  					<span class="popular_menu__item-image"></span>
-  					<a href="#">Экшн-камеры</a>
-  				</li>
-  				<li class="popular_menu__item">
-  					<span class="popular_menu__item-image"></span>
-  					<a href="#">Фитнес-браслеты</a>
-  				</li>
-  				<li class="popular_menu__item">
-  					<span class="popular_menu__item-image"></span>
-  					<a href="#">Умные часы</a>
-  				</li>
-  				<li class="popular_menu__item">
-  					<span class="popular_menu__item-image"></span>
-  					<a href="#">Квадрокоптеры</a>
-  				</li>
-  			</ul>
-  		</article>
-  		<article class="services">
-			<div class="services-slider">
-				<label for="services-delivery" class="services__item">Доставка</label>
-				<input type="radio" name="services__delivery" checked>
-				<label for="services-warranty" class="services__item">Гарантия</label>
-				<input type="radio" name="services-warranty" class="services__item">
-				<label for="services-debt" class="services__item">Кредит</label>
-				<input type="radio" name="services_debt" class="services__item">
-  			</div>
-  			<div class="services__item__delivery">
-  				<b class="services__item__label">Доставка</b>
-  				<p class="services__item__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-  				<span class="services__item__delivery-icon"></span>
-  			</div>
-  			<div class="services__item__warranty">
-  				<b class="services__item__label">Гарантия</b>
-  				<p class="services__item__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-Товар, не дом, конечно же.</p>
-  				<span class="services__item__warranty-icon"></span>
-  			</div>
-  			<div class="services__item__debt">
-  				<b class="services__item__label">Кредит</b>
-  				<p class="services__item__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
-условия кредита. Выгодные для нашего банка, разумеется.</p>
-  				<span class="services__item__debt-icon"></span>
-  			</div>
-  		</article>
-  		<section class="partners">
-  			<ul class="partners-list">
-  				<li class="partners-list__item">
-  					<a href="#">
-  						<img src="#">
-  					</a>
-  				</li>
-  				<li class="partners-list__item">
-  					<a href="#">
-  						<img src="#">
-  					</a>
-  				</li>
-  				<li class="partners-list__item">
-  					<a href="#">
-  						<img src="#">
-  					</a>
-  				</li>
-  				<li class="partners-list__item">
-  					<a href="#">
-  						<img src="#">
-  					</a>
-  				</li>
-  			</ul>
-  		</section>
-  		<section class="info">
-  			<div class="info__about">
-  				<b>О нас</b>
-  				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-  				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-  				<ul class="info__partners">
-  					<li>
-  						<a href="#">Деловые линии</a>
-  					</li>
-  					<li>
-  						<a href="#">Автотрейдинг</a>
-  					</li>
-  					<li>
-  						<a href="#">ЖелДорЭкспедиция</a>
-  					</li>
-  				</ul>
-  				<a href="#">Подробнее о нас</a>
-  			</div>
-  			<div class="info__contacts">
-  				<b>Контакты</b>
-  				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-  				<img src="#">
-  				<a href="#">Напишите нам</a>
-  			</div>
-  		</section>
-  	</main>
-  	<footer class="main-footer">
-  		<div class="footer-contacts">
-  			<span class="footer-contacts__logo">Device</span>
-  			<p>г. Москва, ул. Строителей, 15</p>
-  		</div>
-  		<nav class="footer-nav">
-  			<ul class="footer-nav__list">
-  				<li>
-  					<a href="#">Доставка</a>
-  				</li>
-  				<li>
-  					<a href="#">Гарантия</a>
-  				</li>
-  				<li>
-  					<a href="#">Контакты</a>
-  				</li>
-  			</ul>
-  		</nav>
-  		<div class="footer-social">
-  			<ul>
-  				<li>
-  					<a href="#" class="footer-social__vk">VK</a>
-  				</li>
-  				<li>
-  					<a href="#" class="footer-social__instagram">Instagram</a>
-  				</li>
-  				<li>
-  					<a href="#" class="footer-social__twitter">Twitter</a>
-  				</li>
-  			</ul>
-  		</div>
-  		<nav class="footer-service-nav">
-  			<ul>
-  				<li>
-  					<span class="footer-service-nav__login"></span>
-  					<a href="#">Войти</a>
-  				</li>
-  				<li>
-  					<span class="footer-service-nav__compare"></span>
-  					<a href="#">Сравнить</a>
-  				</li>
-  				<li>
-  					<span class="footer-service-nav__cart"></span>
-  					<a href="#">Корзина</a>
-  				</li>
-  			</ul>
-  		</nav>
-  	</footer>
+    <nav class="service-nav">
+        <ul class="service-nav__wrapper">
+            <li class="service-nav__login">
+                <a href="#" class="service-nav__link service-nav__link--hover">
+                    <span class="service-nav__login-icon"></span>
+                    <span class="service-nav__link-text">Войти</span>
+                </a>
+            </li>
+            <li class="service-nav__compare">
+                <a href="#" class="service-nav__link service-nav__link--hover">
+                    <span class="service-nav__compare-icon"></span>
+                    <span class="service-nav__link-text">Сравнить</span>
+                </a>
+            </li>
+            <li class="service-nav__cart">
+                <a href="#" class="service-nav__link service-nav__link--hover">
+                    <span class="service-nav__cart-icon"></span>
+                    <span class="service-nav__link-text">Корзина</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-	<section class="modal modal-contact">
-		<!-- Здесь будет форма -->
-		<span class="modal-close">x</span>
-	</section>
+    <nav class="site-nav">
+        <ul class="site-nav__wrapper">
+            <li class="site-nav__catalog">
+                <a href="catalog.html">Каталог товаров</a>
+                <span class="site-nav__catalog_icon"></span>
+                <ul class="site-nav__dropdown">
+                    <li class="site-nav__dropdown-item">
+                        <a href="#" class="site-nav__dropdown-link">Виртуальная реальность</a>
+                    </li>
+                    <li class="site-nav__dropdown-item">
+                        <a href="#" class="site-nav__dropdown-link">Экшн-камеры</a>
+                    </li>
+                    <li class="site-nav__dropdown-item">
+                        <a href="#" class="site-nav__dropdown-link">Фитнес-браслеты</a>
+                    </li>
+                    <li class="site-nav__dropdown-item">
+                        <a href="#" class="site-nav__dropdown-link">Умные часы</a>
+                    </li>
+                    <li class="site-nav__dropdown-item">
+                        <a href="#" class="site-nav__dropdown-link">Квадрокоптеры</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="main_nav__delivery">
+                <a href="#">Доставка</a>
+            </li>
+            <li class="main_nav__warranty">
+                <a href="#">Гарантия</a>
+            </li>
+            <li class="main_nav__contacts">
+                <a href="#">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-	<section class="modal modal-map">
-		<!-- Здесь будет карта -->
-		<span class="modal-close">x</span>
-	</section>
-  </body>
+<main>
+    <section class="slider">
+        <div class="slider-item">
+            <div class="slider-item__image">
+                <img class="slider-item__image" src="http://placehold.it/230x384" height="384" width="230" alt="TBD">
+            </div>
+            <div class="slider-item__desctiption">
+                <div class="slider-item__header">
+                    <span class="slider-item__line"></span>
+                    <span class="slider-item__number">01</span>
+                </div>
+                <div class="slider-item__info">
+                    <h2 class="slider-item__text">Делай селфи, как Бен Стиллер!</h2>
+                    <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и
+                        весом всего 5 килограмм.</p>
+                </div>
+                <div class="slider-item__links">
+                    <a href="#" class="slider-item__more">Подробнее</a>
+                    <div class="slider-controls">
+                        <input type="radio" name="slider_control_1" class="slider-controls__control" checked>
+                        <input type="radio" name="slider_control_2" class="slider-controls__control">
+                        <input type="radio" name="slider_control_2" class="slider-controls__control">
+                    </div>
+                </div>
+                <div class="slider-item__specs">
+                    <table class="slider-table">
+                        <tr class="slider-table__header-row">
+                            <th class="slider-table__header">Длина палки</th>
+                            <th class="slider-table__header">Вес палки</th>
+                            <th class="slider-table__header">Материал</th>
+                        </tr>
+                        <tr class="slider-table__row">
+                            <td class="slider-table__data">8,5 м</td>
+                            <td class="slider-table__data">5 кг</td>
+                            <td class="slider-table__data">Карбон</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item">
+            <div class="slider-item__image">
+                <img class="slider-item__image" src="http://placehold.it/230x384" height="384" width="230" alt="TBD">
+            </div>
+            <div class="slider-item__desctiption">
+                <div class="slider-item__header">
+                    <span class="slider-item__line"></span>
+                    <span class="slider-item__number">02</span>
+                </div>
+                <div class="slider-item__info">
+                    <h2 class="slider-item__text">Худеем правильно!</h2>
+                    <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
+                        диету.</p>
+                </div>
+                <div class="slider-item__links">
+                    <a href="#" class="slider-item__more">Подробнее</a>
+                    <div class="slider-controls">
+                        <input type="radio" name="slider_control_1" class="slider-controls__control" checked>
+                        <input type="radio" name="slider_control_2" class="slider-controls__control">
+                        <input type="radio" name="slider_control_2" class="slider-controls__control">
+                    </div>
+                </div>
+                <div class="slider-item__specs">
+                    <table class="slider-table">
+                        <tr class="slider-table__header-row">
+                            <th class="slider-table__header">Без подзарядки</th>
+                        </tr>
+                        <tr class="slider-table__row">
+                            <td class="slider-table__data">48 часов</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item">
+            <div class="slider-item__image">
+                <img class="slider-item__image" src="http://placehold.it/230x384" height="384" width="230" alt="TBD">
+            </div>
+            <div class="slider-item__desctiption">
+                <div class="slider-item__header">
+                    <span class="slider-item__line"></span>
+                    <span class="slider-item__number">03</span>
+                </div>
+                <div class="slider-item__info">
+                    <h2 class="slider-item__text">Порхает как бабочка, жалит как пчела!</h2>
+                    <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под
+                        стандартную камеру.</p>
+                </div>
+                <div class="slider-item__links">
+                    <a href="#" class="slider-item__more">Подробнее</a>
+                    <div class="slider-controls">
+                        <input type="radio" name="slider_control_1" class="slider-controls__control" checked>
+                        <input type="radio" name="slider_control_2" class="slider-controls__control">
+                        <input type="radio" name="slider_control_2" class="slider-controls__control">
+                    </div>
+                </div>
+                <div class="slider-item__specs">
+                    <table class="slider-table">
+                        <tr class="slider-table__header-row">
+                            <th class="slider-table__header">Без подзарядки</th>
+                        </tr>
+                        <tr class="slider-table__row">
+                            <td class="slider-table__data">48 часов</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular_categories">
+        <ul class="popular-menu">
+            <li class="popular_menu__item">
+                <a href="#" class="popular-menu__item-link">
+                    <div class="popular-menu__image-wrapper">
+                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
+                             alt="TBD">
+                    </div>
+                    <span class="popular-menu__item-text">Виртуальная реальность</span>
+                </a>
+            </li>
+            <li class="popular_menu__item">
+                <a href="#" class="popular-menu__item-link">
+                    <div class="popular-menu__image-wrapper">
+                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
+                             alt="TBD">
+                    </div>
+                    <span class="popular-menu__item-text">Моноподы для селфи</span>
+                </a>
+            </li>
+            <li class="popular_menu__item">
+                <a href="#" class="popular-menu__item-link">
+                    <div class="popular-menu__image-wrapper">
+                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
+                             alt="TBD">
+                    </div>
+                    <span class="popular-menu__item-text">Экшн-камеры</span>
+                </a>
+            </li>
+            <li class="popular_menu__item">
+                <a href="#" class="popular-menu__item-link">
+                    <div class="popular-menu__image-wrapper">
+                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
+                             alt="TBD">
+                    </div>
+                    <span class="popular-menu__item-text">Фитнес-браслеты</span>
+                </a>
+            </li>
+            <li class="popular_menu__item">
+                <a href="#" class="popular-menu__item-link">
+                    <div class="popular-menu__image-wrapper">
+                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
+                             alt="TBD">
+                    </div>
+                    <span class="popular-menu__item-text">Умные часы</span>
+                </a>
+            </li>
+            <li class="popular_menu__item">
+                <a href="#" class="popular-menu__item-link">
+                    <div class="popular-menu__image-wrapper">
+                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
+                             alt="TBD">
+                    </div>
+                    <span class="popular-menu__item-text">Квадрокоптеры</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="services">
+        <div class="services-slider__controls">
+            <button class="services-slider__button">Доставка</button>
+            <button class="services-slider__button">Гарантия</button>
+            <button class="services-slider__button services-slider__button--active">Кредит</button>
+        </div>
+        <span class="services-delimeter"></span>
+        <div class="services-item__delivery">
+            <div class="services-item__description">
+                <h2 class="services-item__label">Доставка</h2>
+                <p class="services-item__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
+                    бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            </div>
+            <span class="services-item__delivery-icon"></span>
+        </div>
+        <div class="services-item__warranty">
+            <div class="services-item__description">
+                <h2 class="services-item__label">Гарантия</h2>
+                <p class="services-item__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не
+                    переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            </div>
+            <span class="services-item__warranty-icon"></span>
+        </div>
+        <div class="services-item__credit">
+            <div class="services-item__description">
+                <h2 class="services-item__label">Кредит</h2>
+                <p class="services-item__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для
+                    вас наиболее выгодные
+                    условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </div>
+            <span class="services-item__credit-icon"></span>
+        </div>
+    </section>
+
+    <section class="partners">
+        <ul class="partners-list">
+            <li class="partners-list__item">
+                <a href="#" class="partners-list__link">
+                    <img src="#" class="partners-list__image partners-list__image--hover" alt="TBD">
+                </a>
+            </li>
+            <li class="partners-list__item">
+                <a href="#" class="partners-list__link">
+                    <img src="#" class="partners-list__image partners-list__image--hover" alt="TBD">
+                </a>
+            </li>
+            <li class="partners-list__item">
+                <a href="#" class="partners-list__link">
+                    <img src="#" class="partners-list__image partners-list__image--hover" alt="TBD">
+                </a>
+            </li>
+            <li class="partners-list__item">
+                <a href="#" class="partners-list__link">
+                    <img src="#" class="partners-list__image partners-list__image--hover" alt="TBD">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="contacts">
+        <div class="contacts_item">
+            <h2 class="contacts-label">О нас</h2>
+            <p class="contacts-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из
+                нас.</p>
+            <p class="contacts-text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со
+                многими транспортными компаниями:</p>
+            <ul class="contacts-partners">
+                <li class="contacts-partners__item">
+                    <a href="#" class="contacts-partners__link">Деловые линии</a>
+                </li>
+                <li class="contacts-partners__item">
+                    <a href="#" class="contacts-partners__link">Автотрейдинг</a>
+                </li>
+                <li class="contacts-partners__item">
+                    <a href="#" class="contacts-partners__link">ЖелДорЭкспедиция</a>
+                </li>
+            </ul>
+            <a href="#" class="contacts-link">Подробнее о нас</a>
+        </div>
+        <div class="contacts_item">
+            <h2 class="contacts-label">Контакты</h2>
+            <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
+                работоспособность покупки. Всякое бывает.</p>
+            <img src="#" alt="Карта">
+            <a href="#" class="contacts-link">Напишите нам</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-row">
+        <div class="footer-left">
+            <span class="footer-logo">Device</span>
+        </div>
+        <div class="footer-right">
+            <nav class="service-nav">
+                <ul class="service-nav__wrapper">
+                    <li class="service-nav__login">
+                        <a href="#" class="service-nav__link service-nav__link--hover">
+                            <span class="service-nav__login-icon service-nav__login-icon--yellow"></span>
+                            <span class="service-nav__link-text">Войти</span>
+                        </a>
+                    </li>
+                    <li class="service-nav__compare">
+                        <a href="#" class="service-nav__link service-nav__link--hover">
+                            <span class="service-nav__compare-icon service-nav__login-icon--yellow"></span>
+                            <span class="service-nav__link-text">Сравнить</span>
+                        </a>
+                    </li>
+                    <li class="service-nav__cart">
+                        <a href="#" class="service-nav__link service-nav__link--hover">
+                            <span class="service-nav__cart-icon service-nav__login-icon--yellow"></span>
+                            <span class="service-nav__link-text">Корзина</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div>
+        <div class="footer-left">
+            <span class="footer-address">г. Москва, ул. Строителей, 15</span>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-service-nav">
+                <li class="footer-service-nav__item">
+                    <a href="#" class="footer-service-nav__link">Доставка</a>
+                </li>
+                <li class="footer-service-nav__item">
+                    <a href="#" class="footer-service-nav__link">Гарантия</a>
+                </li>
+                <li class="footer-service-nav__item">
+                    <a href="#" class="footer-service-nav__link">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div class="footer-left">
+            <span class="footer-line"></span>
+        </div>
+        <div class="footer-center">
+            <ul class="footer-social">
+                <li>
+                    <a href="#" class="footer-social__vk">VK</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-social__instagram">Instagram</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-social__twitter">Twitter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <a href="#" class="html-academy">HTML Academy</a>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-wrapper">
+    <section class="modal modal-contact">
+        <!-- Здесь будет форма -->
+        <button class="modal-close">x</button>
+    </section>
+</div>
+
+<div class="modal-wrapper">
+    <section class="modal  modal-map">
+        <!-- Здесь будет карта -->
+        <button class="modal-close">x</button>
+    </section>
+</div>
+</body>
 </html>
