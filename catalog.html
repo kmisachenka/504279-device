@@ -17,20 +17,20 @@
     <nav class="service-nav">
         <ul class="service-nav__wrapper">
             <li class="service-nav__login">
-                <a href="#" class="service-nav__link service-nav__link--hover">
+                <a href="#" class="service-nav__link">
                     <span class="service-nav__login-icon"></span>
                     <span class="service-nav__link-text">Валентин Петухов</span>
-                    <button class="service-nav__link-logout">Выйти</button>
                 </a>
+                <button class="service-nav__link-logout">Выйти</button>
             </li>
             <li class="service-nav__compare">
-                <a href="#" class="service-nav__link service-nav__link--hover">
+                <a href="#" class="service-nav__link">
                     <span class="service-nav__compare-icon"></span>
                     <span class="service-nav__link-text">Сравнить</span>
                 </a>
             </li>
             <li class="service-nav__cart">
-                <a href="#" class="service-nav__link service-nav__link--hover">
+                <a href="#" class="service-nav__link">
                     <span class="service-nav__cart-icon"></span>
                     <span class="service-nav__link-text">Корзина</span>
                 </a>
@@ -46,6 +46,9 @@
                 <ul class="site-nav__dropdown">
                     <li class="site-nav__dropdown-item">
                         <a href="#" class="site-nav__dropdown-link">Виртуальная реальность</a>
+                    </li>
+                    <li class="site-nav__dropdown-item">
+                        <a href="#" class="site-nav__dropdown-link">Моноподы для селфи</a>
                     </li>
                     <li class="site-nav__dropdown-item">
                         <a href="#" class="site-nav__dropdown-link">Экшн-камеры</a>
@@ -88,10 +91,10 @@
     <section class="catalog">
         <h2 class="visually-hidden">Моноподы для селфи</h2>
         <div class="catalog-sort">
-            <span class="catalog-sort__label">Сортировка</span>
+            <span class="catalog-sort__label">Сортировка: </span>
             <ul class="catalog-sort__items">
                 <li class="catalog-sort__item">
-                    <button class="catalog-sort__button">По цене</button>
+                    <button class="catalog-sort__button catalog-sort__button--selected">По цене</button>
                 </li>
                 <li class="catalog-sort__item">
                     <button class="catalog-sort__button">По типу</button>
@@ -105,7 +108,7 @@
                     <button class="catalog-order__button">По возрастанию</button>
                 </li>
                 <li class="catalog-order__item">
-                    <button class="catalog-order__button">По убыванию</button>
+                    <button class="catalog-order__button atalog-order__button--selected">По убыванию</button>
                 </li>
             </ul>
         </div>
@@ -121,13 +124,13 @@
                 </div>
                 <div class="catalog-line">
                     <span class="catalog-item__title">Любительская селфи-палка</span>
-                    <span class="catalog-item__price">1 500 руб.</span>
+                    <span class="catalog-item__price">500 руб.</span>
                 </div>
             </li>
             <li class="catalog-item">
                 <div class="catalog-image__wrapper">
                     <img class="catalog-image" src="http://placehold.it/360x380" width="380" height="360"
-                         alt="Любительская селфи-палка">
+                         alt="Профессиональная селфи-палка">
                     <div class="catalog-image__buttons">
                         <button class="catalog-item__cart-button">В корзину</button>
                         <button class="catalog-item__compare-button">Добавить к сравнению</button>
@@ -153,7 +156,7 @@
                 </div>
             </li>
             <li class="catalog-item">
-                <div class="catalog-image__wrapper">
+                <div class="catalog-image__wrapper catalog-image-new">
                     <img class="catalog-image" src="http://placehold.it/360x380" width="380" height="360"
                          alt="Селфи-палка «Следуй за мной»">
                     <div class="catalog-image__buttons">
@@ -168,14 +171,13 @@
             </li>
         </ul>
         <div class="pagination">
-            <div class="pagination-item pagination-item__prev"><a href="#">Назад</a></div>
+            <a href="#" class="pagination-prev">Назад</a>
             <ul class="pagination-list">
                 <li class="pagination-list__item  pagination-list__item--current">1</li>
                 <li class="pagination-list__item"><a href="#">2</a></li>
                 <li class="pagination-list__item"><a href="#">3</a></li>
             </ul>
-            <div class="pagination-item pagination-item__next"><a href="#">Вперед</a></div>
-            div
+            <a href="#" class="pagination-next">Вперед</a>
         </div>
     </section>
 </main>
@@ -227,6 +229,9 @@
                     <a href="#" class="footer-service-nav__link">Контакты</a>
                 </li>
             </ul>
+        </div>
+        <div class="footer-right">
+            <span class="footer-phone">Тел: + 7 (495) 495-95-95</span>
         </div>
     </div>
     <div class="footer-row">
