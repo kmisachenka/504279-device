@@ -7,29 +7,31 @@
 <body>
 <header class="header">
     <div class="header-logo">
-        <a href="#" class="header-logo__link">Device</a>
+        <a href="index.html" class="header-logo__link">Device</a>
     </div>
     <div class="header-search">
-        <input class="header-search__input" type="search" name="search" placeholder="Поиск по сайту">
-        <button class="header-search__button" type="submit">Поиск</button>
+        <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
+            <button class="search-form__button" type="submit">Поиск</button>
+        </form>
     </div>
 
     <nav class="service-nav">
         <ul class="service-nav__wrapper">
             <li class="service-nav__login">
-                <a href="#" class="service-nav__link service-nav__link--hover">
+                <a href="/login" class="service-nav__link service-nav__link--hover">
                     <span class="service-nav__login-icon"></span>
                     <span class="service-nav__link-text">Войти</span>
                 </a>
             </li>
             <li class="service-nav__compare">
-                <a href="#" class="service-nav__link service-nav__link--hover">
+                <a href="/compare" class="service-nav__link service-nav__link--hover">
                     <span class="service-nav__compare-icon"></span>
                     <span class="service-nav__link-text">Сравнить</span>
                 </a>
             </li>
             <li class="service-nav__cart">
-                <a href="#" class="service-nav__link service-nav__link--hover">
+                <a href="/cart" class="service-nav__link service-nav__link--hover">
                     <span class="service-nav__cart-icon"></span>
                     <span class="service-nav__link-text">Корзина</span>
                 </a>
@@ -61,13 +63,13 @@
                 </ul>
             </li>
             <li class="main_nav__delivery">
-                <a href="#">Доставка</a>
+                <a href="/delivery">Доставка</a>
             </li>
             <li class="main_nav__warranty">
-                <a href="#">Гарантия</a>
+                <a href="/warranty">Гарантия</a>
             </li>
             <li class="main_nav__contacts">
-                <a href="#">Контакты</a>
+                <a href="/contacts">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -248,9 +250,9 @@
 
     <section class="services">
         <div class="services-slider__controls">
-            <button class="services-slider__button services-slider__button--active">Доставка</button>
-            <button class="services-slider__button">Гарантия</button>
-            <button class="services-slider__button">Кредит</button>
+            <button type="button" name="service-delivery" class="services-slider__button services-slider__button--active">Доставка</button>
+            <button type="button" name="service-warranty" class="services-slider__button">Гарантия</button>
+            <button type="button" name="service-credit" class="services-slider__button">Кредит</button>
         </div>
         <div class="services-item__delivery">
             <div class="services-item__description">
@@ -322,7 +324,7 @@
                     <a href="#" class="contacts-partners__link">ЖелДорЭкспедиция</a>
                 </li>
             </ul>
-            <a href="#" class="contacts-link">Подробнее о нас</a>
+            <a href="/more" class="contacts-link">Подробнее о нас</a>
         </div>
         <div class="contacts_item">
             <h2 class="contacts-label">Контакты</h2>
@@ -343,19 +345,19 @@
             <nav class="service-nav">
                 <ul class="service-nav__wrapper">
                     <li class="service-nav__login">
-                        <a href="#" class="service-nav__link service-nav__link--hover">
+                        <a href="/login" class="service-nav__link service-nav__link--hover">
                             <span class="service-nav__login-icon service-nav__login-icon--yellow"></span>
                             <span class="service-nav__link-text">Войти</span>
                         </a>
                     </li>
                     <li class="service-nav__compare">
-                        <a href="#" class="service-nav__link service-nav__link--hover">
+                        <a href="/compare" class="service-nav__link service-nav__link--hover">
                             <span class="service-nav__compare-icon service-nav__login-icon--yellow"></span>
                             <span class="service-nav__link-text">Сравнить</span>
                         </a>
                     </li>
                     <li class="service-nav__cart">
-                        <a href="#" class="service-nav__link service-nav__link--hover">
+                        <a href="/cart" class="service-nav__link service-nav__link--hover">
                             <span class="service-nav__cart-icon service-nav__login-icon--yellow"></span>
                             <span class="service-nav__link-text">Корзина</span>
                         </a>
@@ -371,13 +373,13 @@
         <div class="footer-center">
             <ul class="footer-service-nav">
                 <li class="footer-service-nav__item">
-                    <a href="#" class="footer-service-nav__link">Доставка</a>
+                    <a href="/delivery" class="footer-service-nav__link">Доставка</a>
                 </li>
                 <li class="footer-service-nav__item">
-                    <a href="#" class="footer-service-nav__link">Гарантия</a>
+                    <a href="/warranty" class="footer-service-nav__link">Гарантия</a>
                 </li>
                 <li class="footer-service-nav__item">
-                    <a href="#" class="footer-service-nav__link">Контакты</a>
+                    <a href="/contacts" class="footer-service-nav__link">Контакты</a>
                 </li>
             </ul>
         </div>
@@ -392,33 +394,50 @@
         <div class="footer-center">
             <ul class="footer-social">
                 <li>
-                    <a href="#" class="footer-social__vk">VK</a>
+                    <a href="https://vk.com" class="footer-social__vk">VK</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-social__instagram">Instagram</a>
+                    <a href="https://instagram.com" class="footer-social__instagram">Instagram</a>
                 </li>
                 <li>
-                    <a href="#" class="footer-social__twitter">Twitter</a>
+                    <a href="https://twitter.com" class="footer-social__twitter">Twitter</a>
                 </li>
             </ul>
         </div>
         <div class="footer-right">
-            <a href="#" class="html-academy">HTML Academy</a>
+            <a href="https://htmlacademy.ru" class="html-academy">HTML Academy</a>
         </div>
     </div>
 </footer>
 
 <div class="modal-wrapper">
     <section class="modal modal-contact">
-        <!-- Здесь будет форма -->
-        <button class="modal-close">x</button>
+        <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="contact-item">
+                <label for="contact-name">Ваше имя:</label>
+                <input id="contact-name" name="name" type="text" placeholder="Имя Фамилия" required/>
+            </p>
+            <p class="contact-item">
+                <label for="contact-email">Ваш e-mail:</label>
+                <input id="contact-email" name="email" type="email" placeholder="email@example.com" required/>
+            </p>
+            <p class="contact-item">
+                <label for="contact-text">Текст письма:</label>
+                <textarea id="contact-text" name="text" placeholder="В свободной форме" required></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 </div>
 
 <div class="modal-wrapper">
     <section class="modal  modal-map">
-        <!-- Здесь будет карта -->
-        <button class="modal-close">x</button>
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+            <img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу улица Строителей, 15">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
     </section>
 </div>
 </body>
