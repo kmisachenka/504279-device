@@ -19,19 +19,19 @@
     <nav class="service-nav">
         <ul class="service-nav__wrapper">
             <li class="service-nav__login">
-                <a href="/login" class="service-nav__link service-nav__link--hover">
+                <a href="/login" class="service-nav__link">
                     <span class="service-nav__login-icon"></span>
                     <span class="service-nav__link-text">Войти</span>
                 </a>
             </li>
             <li class="service-nav__compare">
-                <a href="/compare" class="service-nav__link service-nav__link--hover">
+                <a href="/compare" class="service-nav__link">
                     <span class="service-nav__compare-icon"></span>
                     <span class="service-nav__link-text">Сравнить</span>
                 </a>
             </li>
             <li class="service-nav__cart">
-                <a href="/cart" class="service-nav__link service-nav__link--hover">
+                <a href="/cart" class="service-nav__link">
                     <span class="service-nav__cart-icon"></span>
                     <span class="service-nav__link-text">Корзина</span>
                 </a>
@@ -62,13 +62,13 @@
                     </li>
                 </ul>
             </li>
-            <li class="main_nav__delivery">
+            <li class="site-nav__delivery">
                 <a href="/delivery">Доставка</a>
             </li>
-            <li class="main_nav__warranty">
+            <li class="site-nav__warranty">
                 <a href="/warranty">Гарантия</a>
             </li>
-            <li class="main_nav__contacts">
+            <li class="site-nav__contacts">
                 <a href="/contacts">Контакты</a>
             </li>
         </ul>
@@ -77,6 +77,7 @@
 
 <main>
     <section class="slider">
+        <h2 class="visually-hidden">Промо-товары</h2>
         <div class="slider-item">
             <div class="slider-item__image">
                 <img class="slider-item__image" src="img/slider-1.png" height="486" width="384" alt="Восьмиметровая селфи палка! Делай селфи, как Бен Стиллер!">
@@ -94,9 +95,9 @@
                 <div class="slider-item__links">
                     <a href="#" class="slider-item__more">Подробнее</a>
                     <div class="slider-controls">
-                        <input type="radio" name="slider_control_1" class="slider-controls__control" checked>
-                        <input type="radio" name="slider_control_2" class="slider-controls__control">
-                        <input type="radio" name="slider_control_2" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control" checked>
+                        <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-3" class="slider-controls__control">
                     </div>
                 </div>
                 <div class="slider-item__specs">
@@ -133,9 +134,9 @@
                 <div class="slider-item__links">
                     <a href="#" class="slider-item__more">Подробнее</a>
                     <div class="slider-controls">
-                        <input type="radio" name="slider_control_1" class="slider-controls__control">
-                        <input type="radio" name="slider_control_2" class="slider-controls__control" checked>
-                        <input type="radio" name="slider_control_2" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control" checked>
+                        <input type="radio" name="slider_control" value="slider-3" class="slider-controls__control">
                     </div>
                 </div>
                 <div class="slider-item__specs">
@@ -168,9 +169,9 @@
                 <div class="slider-item__links">
                     <a href="#" class="slider-item__more">Подробнее</a>
                     <div class="slider-controls">
-                        <input type="radio" name="slider_control_1" class="slider-controls__control">
-                        <input type="radio" name="slider_control_2" class="slider-controls__control">
-                        <input type="radio" name="slider_control_2" class="slider-controls__control" checked>
+                        <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-3" class="slider-controls__control" checked>
                     </div>
                 </div>
                 <div class="slider-item__specs">
@@ -190,57 +191,58 @@
     </section>
 
     <section class="popular_categories">
+        <h2 class="visually-hidden">Популярные товары</h2>
         <ul class="popular-menu">
-            <li class="popular_menu__item">
+            <li class="popular-menu__item">
                 <a href="#" class="popular-menu__item-link">
                     <div class="popular-menu__image-wrapper">
-                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
-                             alt="TBD">
+                        <img class="popular-menu__image" src="img/popular-1.svg" width="160" height="160"
+                             alt="Виртуальная реальность">
                     </div>
                     <span class="popular-menu__item-text">Виртуальная реальность</span>
                 </a>
             </li>
-            <li class="popular_menu__item">
+            <li class="popular-menu__item">
                 <a href="#" class="popular-menu__item-link">
                     <div class="popular-menu__image-wrapper">
-                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
-                             alt="TBD">
+                        <img class="popular-menu__image" src="img/popular-2.svg" width="160" height="160"
+                             alt="Моноподы для селфи">
                     </div>
                     <span class="popular-menu__item-text">Моноподы для селфи</span>
                 </a>
             </li>
-            <li class="popular_menu__item">
+            <li class="popular-menu__item">
                 <a href="#" class="popular-menu__item-link">
                     <div class="popular-menu__image-wrapper">
-                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
-                             alt="TBD">
+                        <img class="popular-menu__image" src="img/popular-3.svg" width="160" height="160"
+                             alt="Экшн-камеры">
                     </div>
                     <span class="popular-menu__item-text">Экшн-камеры</span>
                 </a>
             </li>
-            <li class="popular_menu__item">
+            <li class="popular-menu__item">
                 <a href="#" class="popular-menu__item-link">
                     <div class="popular-menu__image-wrapper">
-                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
-                             alt="TBD">
+                        <img class="popular-menu__image" src="img/popular-4.svg" width="160" height="160"
+                             alt="Фитнес-браслеты">
                     </div>
                     <span class="popular-menu__item-text">Фитнес-браслеты</span>
                 </a>
             </li>
-            <li class="popular_menu__item">
+            <li class="popular-menu__item">
                 <a href="#" class="popular-menu__item-link">
                     <div class="popular-menu__image-wrapper">
-                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
-                             alt="TBD">
+                        <img class="popular-menu__image" src="img/popular-5.svg" width="160" height="160"
+                             alt="Умные часы">
                     </div>
                     <span class="popular-menu__item-text">Умные часы</span>
                 </a>
             </li>
-            <li class="popular_menu__item">
+            <li class="popular-menu__item">
                 <a href="#" class="popular-menu__item-link">
                     <div class="popular-menu__image-wrapper">
-                        <img class="popular-menu__image" src="http://placehold.it/160x160" width="160" height="160"
-                             alt="TBD">
+                        <img class="popular-menu__image" src="img/popular-6.svg" width="160" height="160"
+                             alt="Квадрокоптеры">
                     </div>
                     <span class="popular-menu__item-text">Квадрокоптеры</span>
                 </a>
@@ -249,39 +251,44 @@
     </section>
 
     <section class="services">
-        <div class="services-slider__controls">
+        <h2 class="visually-hidden">Сервисы</h2>
+        <div class="services-slider">
             <button type="button" name="service-delivery" class="services-slider__button services-slider__button--active">Доставка</button>
             <button type="button" name="service-warranty" class="services-slider__button">Гарантия</button>
             <button type="button" name="service-credit" class="services-slider__button">Кредит</button>
         </div>
-        <div class="services-item__delivery">
-            <div class="services-item__description">
-                <h2 class="services-item__label">Доставка</h2>
-                <p class="services-item__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
-                    бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        <div class="services-items">
+            <div class="services-item services-item__delivery">
+                <div class="services-item__description">
+                    <h2 class="services-item__label">Доставка</h2>
+                    <p class="services-item__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно
+                        бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                </div>
+                <span class="services-item__delivery-icon"></span>
             </div>
-            <span class="services-item__delivery-icon"></span>
-        </div>
-        <div class="services-item__warranty">
-            <div class="services-item__description">
-                <h2 class="services-item__label">Гарантия</h2>
-                <p class="services-item__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не
-                    переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            <div class="services-item services-item__warranty">
+                <div class="services-item__description">
+                    <h2 class="services-item__label">Гарантия</h2>
+                    <p class="services-item__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не
+                        переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                </div>
+                <span class="services-item__warranty-icon"></span>
             </div>
-            <span class="services-item__warranty-icon"></span>
-        </div>
-        <div class="services-item__credit">
-            <div class="services-item__description">
-                <h2 class="services-item__label">Кредит</h2>
-                <p class="services-item__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для
-                    вас наиболее выгодные
-                    условия кредита. Выгодные для нашего банка, разумеется.</p>
+            <div class="services-item services-item__credit">
+                <div class="services-item__description">
+                    <h2 class="services-item__label">Кредит</h2>
+                    <p class="services-item__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для
+                        вас наиболее выгодные
+                        условия кредита. Выгодные для нашего банка, разумеется.</p>
+                </div>
+                <span class="services-item__credit-icon"></span>
             </div>
-            <span class="services-item__credit-icon"></span>
         </div>
+
     </section>
 
     <section class="partners">
+        <h2 class="visually-hidden">Компании-партнеры</h2>
         <ul class="partners-list">
             <li class="partners-list__item">
                 <a href="#" class="partners-list__link">
@@ -307,6 +314,7 @@
     </section>
 
     <section class="contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts_item">
             <h2 class="contacts-label">О нас</h2>
             <p class="contacts-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из
@@ -352,13 +360,13 @@
                     </li>
                     <li class="service-nav__compare">
                         <a href="/compare" class="service-nav__link service-nav__link--hover">
-                            <span class="service-nav__compare-icon service-nav__login-icon--yellow"></span>
+                            <span class="service-nav__compare-icon service-nav__compare-icon--yellow"></span>
                             <span class="service-nav__link-text">Сравнить</span>
                         </a>
                     </li>
                     <li class="service-nav__cart">
                         <a href="/cart" class="service-nav__link service-nav__link--hover">
-                            <span class="service-nav__cart-icon service-nav__login-icon--yellow"></span>
+                            <span class="service-nav__cart-icon service-nav__cart-icon--yellow"></span>
                             <span class="service-nav__link-text">Корзина</span>
                         </a>
                     </li>
@@ -412,10 +420,11 @@
 
 <div class="modal-wrapper">
     <section class="modal modal-contact">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
             <p class="contact-item">
                 <label for="contact-name">Ваше имя:</label>
-                <input id="contact-name" name="name" type="text" placeholder="Имя Фамилия" required/>
+                <input id="contact-name" name="name" type="text" placeholder="Имя Фамилия" autofocus required/>
             </p>
             <p class="contact-item">
                 <label for="contact-email">Ваш e-mail:</label>

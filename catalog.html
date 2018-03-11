@@ -66,13 +66,13 @@
                     </li>
                 </ul>
             </li>
-            <li class="main_nav__delivery">
+            <li class="site-nav__delivery">
                 <a href="/delivery">Доставка</a>
             </li>
-            <li class="main_nav__warranty">
+            <li class="site-nav__warranty">
                 <a href="/warranty">Гарантия</a>
             </li>
-            <li class="main_nav__contacts">
+            <li class="site-nav__contacts">
                 <a href="/contacts">Контакты</a>
             </li>
         </ul>
@@ -88,13 +88,16 @@
     </ul>
     <section class="filters">
         <h2 class="visually-hidden">Фильтр:</h2>
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
-                <legend>Стоимость</legend>
-                <input type="range" min="0" max="10000" step="10" value="5000">
-                <!-- TODO -->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru" oni>
+            <fieldset class="filter-price">
+                <legend class="field-legend">
+                    <label for="price" class="filter-price__label">Стоимость</label>
+                </legend>
+                <input id="price" name="price" type="range" class="filter-input filter-input__range" min="0" max="10000" step="10" value="5000" multiple>
+                <output for="price" class="filter-price__output">От 0</output>
+                <output for="price" class="filter-price__output">До 5000</output>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-color">
                 <legend>Цвет</legend>
                 <ul>
                     <li class="filter-option">
@@ -119,8 +122,8 @@
                     </li>
                 </ul>
             </fieldset>
-            <fieldset>
-                <legend>Bluetooth</legend>
+            <fieldset class="filter-bluetooth">
+                <legend class="field-legend">Bluetooth</legend>
                 <ul>
                     <li class="filter-option">
                         <input id="filter-bluetooth-yes"  value="yes" class="filter-input filter-input__radio" name="bluetooth" type="radio" checked>
@@ -141,74 +144,74 @@
             <span class="catalog-sort__label">Сортировка: </span>
             <ul class="catalog-sort__items">
                 <li class="catalog-sort__item">
-                    <button class="catalog-sort__button catalog-sort__button--selected">По цене</button>
+                    <button type="button" class="catalog-sort__button catalog-sort__button--selected">По цене</button>
                 </li>
                 <li class="catalog-sort__item">
-                    <button class="catalog-sort__button">По типу</button>
+                    <button type="button" class="catalog-sort__button">По типу</button>
                 </li>
                 <li class="catalog-sort__item">
-                    <button class="catalog-sort__button">По популярности</button>
+                    <button type="button" class="catalog-sort__button">По популярности</button>
                 </li>
             </ul>
             <ul class="catalog-order">
                 <li class="catalog-order__item">
-                    <button class="catalog-order__button">По возрастанию</button>
+                    <button type="button" class="catalog-order__button">По возрастанию</button>
                 </li>
                 <li class="catalog-order__item">
-                    <button class="catalog-order__button atalog-order__button--selected">По убыванию</button>
+                    <button type="button" class="catalog-order__button catalog-order__button--selected">По убыванию</button>
                 </li>
             </ul>
         </div>
         <ul class="catalog-list">
             <li class="catalog-item">
-                <div class="catalog-image__wrapper">
+                <div class="catalog-wrapper">
                     <img class="catalog-image" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                    <div class="catalog-image__buttons">
-                        <button class="catalog-item__cart-button">В корзину</button>
-                        <button class="catalog-item__compare-button">Добавить к сравнению</button>
+                    <div class="catalog-button">
+                        <button class="catalog-button__cart">В корзину</button>
+                        <button class="catalog-button__compare">Добавить к сравнению</button>
                     </div>
                 </div>
                 <div class="catalog-line">
-                    <span class="catalog-item__title">Любительская селфи-палка</span>
+                    <a href="#" class="catalog-item__link">Любительская селфи-палка</a>
                     <span class="catalog-item__price">500 руб.</span>
                 </div>
             </li>
             <li class="catalog-item">
-                <div class="catalog-image__wrapper">
+                <div class="catalog-wrapper">
                     <img class="catalog-image" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                    <div class="catalog-image__buttons">
-                        <button class="catalog-item__cart-button">В корзину</button>
-                        <button class="catalog-item__compare-button">Добавить к сравнению</button>
+                    <div class="catalog-button">
+                        <button class="catalog-button__cart">В корзину</button>
+                        <button class="catalog-button__compare">Добавить к сравнению</button>
                     </div>
                 </div>
                 <div class="catalog-line">
-                    <span class="catalog-item__title">Профессиональная селфи-палка</span>
+                    <a href="#" class="catalog-item__link">Профессиональная селфи-палка</a>
                     <span class="catalog-item__price">1 500 руб.</span>
                 </div>
             </li>
             <li class="catalog-item">
-                <div class="catalog-image__wrapper">
+                <div class="catalog-wrapper">
                     <img class="catalog-image" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                    <div class="catalog-image__buttons">
-                        <button class="catalog-item__cart-button">В корзину</button>
-                        <button class="catalog-item__compare-button">Добавить к сравнению</button>
+                    <div class="catalog-button">
+                        <button class="catalog-button__cart">В корзину</button>
+                        <button class="catalog-button__compare">Добавить к сравнению</button>
                     </div>
                 </div>
                 <div class="catalog-line">
-                    <span class="catalog-item__title">Непотопляемая селфи-палка</span>
+                    <a href="#" class="catalog-item__link">Непотопляемая селфи-палка</a>
                     <span class="catalog-item__price">2 500 руб.</span>
                 </div>
             </li>
             <li class="catalog-item">
-                <div class="catalog-image__wrapper catalog-image-new">
+                <div class="catalog-wrapper catalog-image-new">
                     <img class="catalog-image" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                    <div class="catalog-image__buttons">
-                        <button class="catalog-item__cart-button">В корзину</button>
-                        <button class="catalog-item__compare-button">Добавить к сравнению</button>
+                    <div class="catalog-button">
+                        <button class="catalog-button__cart">В корзину</button>
+                        <button class="catalog-button__compare">Добавить к сравнению</button>
                     </div>
                 </div>
                 <div class="catalog-line">
-                    <span class="catalog-item__title">Селфи-палка «Следуй за мной»</span>
+                    <a href="#" class="catalog-item__link">Селфи-палка «Следуй за мной»</a>
                     <span class="catalog-item__price">4 900 руб.</span>
                 </div>
             </li>
@@ -241,13 +244,13 @@
                     </li>
                     <li class="service-nav__compare">
                         <a href="#" class="service-nav__link service-nav__link--hover">
-                            <span class="service-nav__compare-icon service-nav__login-icon--yellow"></span>
+                            <span class="service-nav__compare-icon service-nav__compare-icon--yellow"></span>
                             <span class="service-nav__link-text">Сравнить</span>
                         </a>
                     </li>
                     <li class="service-nav__cart">
                         <a href="#" class="service-nav__link service-nav__link--hover">
-                            <span class="service-nav__cart-icon service-nav__login-icon--yellow"></span>
+                            <span class="service-nav__cart-icon service-nav__cart-icon--yellow"></span>
                             <span class="service-nav__link-text">Корзина</span>
                         </a>
                     </li>
