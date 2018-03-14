@@ -3,16 +3,18 @@
 <head>
     <meta charset="utf-8">
     <title>Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
     <div class="header-logo">
         <a href="index.html" class="header-logo__link">Device</a>
     </div>
-    <div class="header-search">
+    <div class="header-search" tabindex="1">
         <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
-            <button class="search-form__button" type="submit">Поиск</button>
+            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
+            <button class="search-form__button" type="submit">Найти</button>
         </form>
     </div>
 
@@ -20,7 +22,6 @@
         <ul class="service-nav__wrapper">
             <li class="service-nav__login">
                 <a href="/login" class="service-nav__link">
-                    <span class="service-nav__login-icon"></span>
                     <span class="service-nav__link-text">Войти</span>
                 </a>
             </li>
