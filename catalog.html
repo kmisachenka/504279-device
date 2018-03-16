@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
-    <div class="header-logo">
+    <div class="logo header-logo">
         <a href="index.html" class="header-logo__link">Device</a>
     </div>
     <div class="header-search">
@@ -229,26 +231,23 @@
 <footer class="footer">
     <div class="footer-row">
         <div class="footer-left">
-            <span class="footer-logo">Device</span>
+            <span class="logo footer-logo">Device</span>
         </div>
         <div class="footer-right">
             <nav class="service-nav">
                 <ul class="service-nav__wrapper">
-                    <li class="service-nav__login">
-                        <a href="#" class="service-nav__link service-nav__link--hover">
-                            <span class="service-nav__login-icon service-nav__login-icon--yellow"></span>
+                    <li class="service-nav__login--yellow">
+                        <a href="#" class="service-nav__link ">
                             <span class="service-nav__link-text">Войти</span>
                         </a>
                     </li>
-                    <li class="service-nav__compare">
-                        <a href="#" class="service-nav__link service-nav__link--hover">
-                            <span class="service-nav__compare-icon service-nav__compare-icon--yellow"></span>
+                    <li class="service-nav__compare--yellow">
+                        <a href="#" class="service-nav__link ">
                             <span class="service-nav__link-text">Сравнить</span>
                         </a>
                     </li>
-                    <li class="service-nav__cart">
+                    <li class="service-nav__cart-yellow">
                         <a href="#" class="service-nav__link service-nav__link--hover">
-                            <span class="service-nav__cart-icon service-nav__cart-icon--yellow"></span>
                             <span class="service-nav__link-text">Корзина</span>
                         </a>
                     </li>
@@ -261,15 +260,15 @@
             <span class="footer-address">г. Москва, ул. Строителей, 15</span>
         </div>
         <div class="footer-center">
-            <ul class="footer-service-nav">
-                <li class="footer-service-nav__item">
-                    <a href="/delivery" class="footer-service-nav__link">Доставка</a>
+            <ul class="social-icons">
+                <li>
+                    <a href="https://vk.com" aria-label="Facebook" class="social-icons__facebook"></a>
                 </li>
-                <li class="footer-service-nav__item">
-                    <a href="/warranty" class="footer-service-nav__link">Гарантия</a>
+                <li>
+                    <a href="https://instagram.com" aria-label="Instagram" class="social-icons__instagram"></a>
                 </li>
-                <li class="footer-service-nav__item">
-                    <a href="/contacts" class="footer-service-nav__link">Контакты</a>
+                <li>
+                    <a href="https://twitter.com" aria-label="Twitter" class="social-icons__twitter"></a>
                 </li>
             </ul>
         </div>
@@ -295,7 +294,9 @@
             </ul>
         </div>
         <div class="footer-right">
-            <a href="https://htmlacademy.ru" aria-label="HTML Academy" class="html-academy"></a>
+            <a href="https://htmlacademy.ru" aria-label="HTML Academy">
+                <img src="img/logo-html.svg" height="35" width="27">
+            </a>
         </div>
     </div>
 </footer>
