@@ -30,6 +30,19 @@
     font-style: normal;
 }
 
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
 body {
     padding: 0;
     margin: 0;
@@ -38,60 +51,65 @@ body {
     font-size: 15px;
     font-weight: 300;
     line-height: 30px;
-
-    color: #464646;
-    background-color: #ffffff;
 }
 
-a {
+.button {
+    display: inline-block;
+    position: relative;
+    width: 260px;
+    padding-top: 8px;
+    font-family: Gilroy, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    text-align: center;
+    border: none;
+    background-color: Transparent;
+
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    z-index: 1;
+}
+
+.button:active {
+    color: rgba(0,0,0,.3);
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 260px;
+    height: 8px;
+    background-color: #f0c52e;
+    z-index: -1;
+}
+
+.button:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 40px;
+    background-color: #f0c52e;
+    z-index: -1;
+}
+
+.link {
     text-decoration: none;
     color: #000000;
 }
 
-a:hover {
-    opacity: 0.5;
+.link:hover {
+    opacity: .6;
 }
 
-a:active {
-    opacity: 0.3;
-}
-
-.button {
-    font-family: 'Gilroy', Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-a.button {
-    padding: 10px 40px;
-    opacity: 1;
-    background:#f0c52e;
-    box-shadow:
-        inset 0 16px 0 0 #ffffff,
-        inset 0 -17px 0 0 #ffffff;
-}
-
-a.button:hover {
-    background-color: #f0c52e;
-    box-shadow: none;
-}
-
-a.button:active {
-    opacity: 0.5;
-    box-shadow: none;
-}
-
-a.button:active{
-
-}
-
-.button:active {
-    outline: none;
+.link:active {
+    opacity: .3;
 }
 
 .visually-hidden {
@@ -112,14 +130,11 @@ a.button:active{
 }
 
 .logo {
+    display: inline-block;
     font-family: 'Gilroy', Arial, sans-serif;
     font-size: 48px;
     font-weight: 800;
     text-transform: uppercase;
-}
-
-.header-logo__link {
-
 }
 
 .search-form:before {
@@ -131,12 +146,8 @@ a.button:active{
     width: 16px;
 }
 
-.header-search:focus,
-.header-search:active {
-    /*box-shadow: inset 0 -2px 0 0 black;*/
-}
-
 .search-form__input {
+    margin: 0;
     border: none;
     background-color: #f7e296;
     padding: 10px;
@@ -144,31 +155,34 @@ a.button:active{
 
 .search-form__input:focus {
     color: black;
-    opacity: 1.0;
     outline: none;
-    box-shadow: inset 0 -2px 0 0 black;
+    border-bottom: 2px solid #000000;
 
 }
 
 .search-form__button {
+    display: none;
+}
+
+.search-form__input:focus + .search-form__button {
+    display: inline-block;
     padding: 10px;
-    box-shadow:
-        inset 2px 2px 0 0 black,
-        inset -2px -2px 0 0 black;
-    border: none;
+    border: 2px solid #000000;
     color: black;
     background-color: #f7e296;
 }
 
-.search-form__button:hover {
-    color: white;
-    background-color: black;
+.search-form__input:focus + .search-form__button:hover {
+    color: #ffffff;
+    background-color: #000000;
 }
 
 .search-form__button:active {
-    outline: none;
-    color: white;
-    background-color: black;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #000000;
+    color: rgba(255, 255, 255, .6);
+    background-color: #000000;
 }
 
 .search-form__button:active::placeholder {
@@ -179,89 +193,79 @@ a.button:active{
     opacity: 0.3;
 }
 
-.search-form__button:active {
-    color: darkgray; /* TODO check this color */
+.search-form__input:hover::placeholder {
+    opacity: .6;
 }
 
-.service-nav ul {
+/* service navigation */
+
+.service-nav .service-items {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.service-nav__wrapper li:hover {
-    opacity: 0.7;
+.service-item {
+    margin: 0;
+    padding: 0;
 }
 
-.service-nav__wrapper li:active {
-    opacity: 0.5;
-}
-
-.service-nav__login:before {
+.service-item:before {
     display: inline-block;
-    content: ' ';
+    content: '';
+    background-size: 16px 16px;
+    height: 16px;
+    width: 16px;
+}
+
+.service-item--login:before {
     background-image: url('../img/user.svg');
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
 }
 
-.service-nav__login--yellow:before {
-    display: inline-block;
-    content: ' ';
+.service-item--login-yellow:before {
     background-image: url('../img/user-yellow.svg');
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
 }
 
-.service-nav__compare:before {
-    display: inline-block;
-    content: ' ';
+.service-item--compare:before {
     background-image: url('../img/compare.svg');
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
 }
 
-.service-nav__compare--yellow:before {
-    display: inline-block;
-    content: ' ';
+.service-item--compare-yellow:before {
     background-image: url('../img/compare-yellow.svg');
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
 }
 
-.service-nav__cart:before {
-    display: inline-block;
-    content: ' ';
+.service-item--cart:before {
     background-image: url('../img/cart.svg');
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
 }
 
-.service-nav__cart-yellow:before {
-    display: inline-block;
-    content: ' ';
+.service-item--cart-yellow:before {
     background-image: url('../img/cart-yellow.svg');
-    background-size: 16px 16px;
-    height: 16px;
-    width: 16px;
 }
 
-.service-nav__link-text {
+.service-item:hover {
+    opacity: .6;
+}
+
+.service-item:active {
+    opacity: .3;
+}
+
+.service-item__link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.service-item__text {
     margin-left: 14px;
 }
 
-.site-nav > ul {
+.site-nav__items {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.site-nav__wrapper > li > a {
+.site-nav__item {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -273,18 +277,21 @@ a.button:active{
 .site-nav__dropdown {
     padding: 0;
     margin: 0;
+
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: .01em;
+    text-transform: initial;
+
     list-style: none;
 }
 
-.site-nav__dropdown-item {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 36px;
-}
+/* Слайдер */
 
-.slider {
-    color: #000000;
+.slider-item__description {
+    font-family: Gilroy, Arial, sans-serif;
 }
 
 .slider-item__number {
@@ -295,7 +302,6 @@ a.button:active{
 }
 
 .slider-item__label {
-    font-family: Gilroy, "Gilroy", Arial, sans-serif;
     font-size: 47px;
     font-weight: 800;
     line-height: 56px;
@@ -317,9 +323,9 @@ a.button:active{
     letter-spacing: 2px;
 }
 
+/* Таблица слайдера */
 
-
-.slider-table__header {
+.table-header {
     color: #464646;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 13px;
@@ -327,11 +333,17 @@ a.button:active{
     line-height: 20px;
 }
 
-.slider-table__data {
+.table-header__item {
+    font-weight: 300;
+}
+
+.table-data {
     font-size: 36px;
     font-weight: 300;
     line-height: 48px;
 }
+
+/* Популярные товары */
 
 .popular-menu {
     display: flex;
@@ -344,47 +356,104 @@ a.button:active{
     width: 160px;
 }
 
+.popular-menu__item-link {
+    text-decoration: none;
+    color: #000000;
+}
+
 .popular-menu__image-wrapper {
+    display: inline-block;
     width: 160px;
     height: 160px;
-    background-color: #f0c52e;
-    opacity: 0.5;
-    text-align:center;
-    vertical-align: middle; /* Почему не работает? : */
+    background-color: #f7e296;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .popular-menu__image-wrapper:hover {
-    opacity: 1;
+    background-color: #f0c52e;
 }
 
-.popular-menu__image-wrapper:active {
-    opacity: 1;
+.popular-menu__item-link:active .popular-menu__image,
+.popular-menu__item-link:active .popular-menu__item-text {
+    opacity: .3;
+}
+
+.popular-menu__image {
+    display: inline-block;
+    height: 100%;
 }
 
 .popular-menu__item-text {
+    margin: 0;
     font-family: Gilroy, Arial, sans-serif;
     font-size: 18px;
     font-weight: 800;
     line-height: 24px;
-    text-align: center;
 }
 
+/* Сервисы */
+
+
 .services {
-    font-family: 'Gilroy', Arial, sans-serif;
-    font-weight: 800;
+    font-family: Gilroy, Arial, sans-serif;
     background-color: #e5e5e5;
 }
 
-.services-slider__button--active {
+.services-slider__button {
+    display: inline-block;
+    position: relative;
+    width: 220px;
+    padding-top: 8px;
     font-size: 18px;
+    font-weight: 800;
     line-height: 24px;
-
+    text-align: center;
     border: none;
-    color: #f7e184;
-    background-color: black;
+    background-color: Transparent;
+
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    z-index: 1;
 }
 
+.services-slider__button:active {
+    color: #f7e296;
+}
+
+.services-slider__button::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 220px;
+    height: 8px;
+    background-color: #f0c52e;
+    z-index: -1;
+}
+
+.services-slider__button:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 40px;
+    background-color: #f0c52e;
+    z-index: -1;
+}
+
+.services-slider__button:active::after {
+    background-color: #000000;
+}
+
+
 .services-item__label {
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
     color: #000000;
     font-size: 47px;
 }
@@ -397,17 +466,50 @@ a.button:active{
     line-height: 30px;
 }
 
+.services-item {
+    display: inline-block;
+}
+
+.services-item__delivery::after {
+    display: inline-block;
+    content: '';
+    background-image: url("../img/delivery.svg");
+    height: 164px;
+    width: 136px;
+}
+
+.services-item__warranty::after {
+    display: inline-block;
+    content: '';
+    background-image: url("../img/warranty.svg");
+    height: 195px;
+    width: 171px;
+}
+
+.services-item__credit::after {
+    display: inline-block;
+    content: '';
+    background-image: url("../img/credit.svg");
+    height: 188px;
+    width: 156px;
+}
+
+/* Представленные бренды */
+
 .partners-list {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.partners-list__image--dji {
+.partners-list__image {
     opacity: 0.2;
     display: block;
     width: 260px;
     height: 100px;
+}
+
+.partners-list__image--dji {
     background-image: url("../img/logo-partner-dji.png");;
 }
 
@@ -417,10 +519,6 @@ a.button:active{
 }
 
 .partners-list__image--spgadgets {
-    opacity: 0.2;
-    display: block;
-    width: 260px;
-    height: 100px;
     background-image: url("../img/logo-partner-spgadgets.png");;
 }
 
@@ -430,10 +528,6 @@ a.button:active{
 }
 
 .partners-list__image--gopro {
-    opacity: 0.2;
-    display: block;
-    width: 260px;
-    height: 100px;
     background-image: url("../img/logo-partner-gopro.png");;
 }
 
@@ -443,10 +537,6 @@ a.button:active{
 }
 
 .partners-list__image--vive {
-    opacity: 0.2;
-    display: block;
-    width: 260px;
-    height: 100px;
     background-image: url("../img/logo-partner-vive.png");;
 }
 
@@ -491,12 +581,12 @@ a.button:active{
     background-color: #464646;
 }
 
-.footer a {
-
-    color: white;
+.footer .link {
+    color: #ffffff;
 }
 
-.footer-logo {
+.footer .logo {
+    text-decoration: none;
     color: #ffc600;
 }
 
@@ -509,6 +599,8 @@ a.button:active{
 }
 
 .footer-service-nav {
+    padding: 0;
+    margin: 0;
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -526,7 +618,6 @@ a.button:active{
 
 }
 
-
 .social-icons {
     padding: 0;
     margin: 0;
@@ -535,33 +626,35 @@ a.button:active{
 
 .social-icon {
     display: block;
-}
-
-.social-icons__facebook {
-    display: block;
     width: 32px;
     height: 32px;
+    opacity: .3;
+}
+
+.social-icon:hover {
+    opacity: .6;
+}
+
+.social-icon:active {
+    opacity: .1;
+}
+
+.social-icon--facebook {
     background-image: url("../img/fb.svg");
-    opacity: 0.2;
+
 }
 
-.social-icons__instagram {
-    display: block;
-    width: 32px;
-    height: 32px;
+.social-icon--instagram {
     background-image: url("../img/instagram.svg");
-    opacity: 0.2;
 }
 
-.social-icons__twitter {
-    display: block;
-    width: 32px;
-    height: 32px;
+.social-icons--twitter {
     background-image: url("../img/twitter.svg");
-    opacity: 0.2;
 }
 
-.contact-item label {
+/* Модальные окна */
+
+.contact-item__label {
     color: #000000;
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 18px;
@@ -569,8 +662,7 @@ a.button:active{
     line-height: 24px;
 }
 
-.contact-item input,
-.contact-item textarea {
+.contact-item__input {
     width: 360px;
     height: 50px;
     border: none;
@@ -580,31 +672,42 @@ a.button:active{
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
-    opacity: 0.5;
     padding-left: 18px;
     outline: none;
 }
 
-.contact-item input:hover,
-.contact-item textarea:hover {
-    opacity: 1;
+.contact-item__textarea {
+    width: 760px;
+    height: 156px;
+    background-color: #f2f2f2;
+    border: none;
+    color: #464646;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-top: 18px;
+    padding-left: 18px;
+    outline: none;
+
 }
 
-.contact-item input:focus,
-.contact-item textarea:focus {
+.contact-item__input:hover,
+.contact-item__textarea:hover {
+    background-color: #eaeaea;
+}
+
+.contact-item__input:focus,
+.contact-item__textarea:focus{
     background-color: #ffffff;
-    box-shadow:
-        inset 2px 2px 0 0 #f0c52e,
-        inset -2px -2px 0 0 #f0c52e;
-    opacity: 1;
+    border: 2px #f7e296 solid;
 }
 
-.contact-item input::placeholder,
-.contact-item textarea::placeholder {
+.contact-item__input::placeholder,
+.contact-item__textarea::placeholder {
     color: #464646;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
 }
-

@@ -9,7 +9,7 @@
 <body>
 <header class="header">
     <div class="logo header-logo">
-        <a href="index.html" class="header-logo__link">Device</a>
+        <a href="index.html" class="link">Device</a>
     </div>
     <div class="header-search" tabindex="1">
         <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
@@ -19,59 +19,58 @@
     </div>
 
     <nav class="service-nav">
-        <ul class="service-nav__wrapper">
-            <li class="service-nav__login">
-                <a href="/login" class="service-nav__link">
-                    <span class="service-nav__link-text">Войти</span>
+        <ul class="service-items">
+            <li class="service-item service-item--login">
+                <a href="/login" class="service-item__link">
+                    <span class="service-item__text">Войти</span>
                 </a>
             </li>
-            <li class="service-nav__compare">
-                <a href="/compare" class="service-nav__link">
-                    <span class="service-nav__link-text">Сравнить</span>
+            <li class="service-item service-item--compare">
+                <a href="/compare" class="service-item__link">
+                    <span class="service-item__text">Сравнить</span>
                 </a>
             </li>
-            <li class="service-nav__cart">
-                <a href="/cart" class="service-nav__link">
-                    <span class="service-nav__link-text">Корзина</span>
+            <li class="service-item service-item--cart">
+                <a href="/cart" class="service-item__link">
+                    <span class="service-item__text">Корзина</span>
                 </a>
             </li>
         </ul>
     </nav>
 
     <nav class="site-nav">
-        <ul class="site-nav__wrapper">
-            <li class="site-nav__catalog">
-                <a href="catalog.html">Каталог товаров</a>
-                <span class="site-nav__catalog_icon"></span>
+        <ul class="site-nav__items">
+            <li class="site-nav__item">
+                <a class="link" href="catalog.html">Каталог товаров</a>
                 <ul class="site-nav__dropdown">
                     <li class="site-nav__dropdown-item">
-                        <a href="#" class="site-nav__dropdown-link">Виртуальная реальность</a>
+                        <a href="#" class="link site-nav__dropdown-link">Виртуальная реальность</a>
                     </li>
                     <li class="site-nav__dropdown-item">
-                        <a href="#" class="site-nav__dropdown-link">Моноподы для селфи</a>
+                        <a href="#" class="link site-nav__dropdown-link">Моноподы для селфи</a>
                     </li>
                     <li class="site-nav__dropdown-item">
-                        <a href="#" class="site-nav__dropdown-link">Экшн-камеры</a>
+                        <a href="#" class="link site-nav__dropdown-link">Экшн-камеры</a>
                     </li>
                     <li class="site-nav__dropdown-item">
-                        <a href="#" class="site-nav__dropdown-link">Фитнес-браслеты</a>
+                        <a href="#" class="link site-nav__dropdown-link">Фитнес-браслеты</a>
                     </li>
                     <li class="site-nav__dropdown-item">
-                        <a href="#" class="site-nav__dropdown-link">Умные часы</a>
+                        <a href="#" class="link site-nav__dropdown-link">Умные часы</a>
                     </li>
                     <li class="site-nav__dropdown-item">
-                        <a href="#" class="site-nav__dropdown-link">Квадрокоптеры</a>
+                        <a href="#" class="link site-nav__dropdown-link">Квадрокоптеры</a>
                     </li>
                 </ul>
             </li>
-            <li class="site-nav__delivery">
-                <a href="/delivery">Доставка</a>
+            <li class="site-nav__item">
+                <a class="link" href="/delivery">Доставка</a>
             </li>
-            <li class="site-nav__warranty">
-                <a href="/warranty">Гарантия</a>
+            <li class="site-nav__item">
+                <a class="link" href="/warranty">Гарантия</a>
             </li>
-            <li class="site-nav__contacts">
-                <a href="/contacts">Контакты</a>
+            <li class="site-nav__item">
+                <a class="link" href="/contacts">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -105,16 +104,16 @@
                     </div>
                 </div>
                 <div class="slider-item__specs">
-                    <table class="slider-table">
-                        <tr class="slider-table__header-row">
-                            <th class="slider-table__header">Длина палки</th>
-                            <th class="slider-table__header">Вес палки</th>
-                            <th class="slider-table__header">Материал</th>
+                    <table class="table">
+                        <tr class="table-header">
+                            <th class="table-header__item">Длина палки</th>
+                            <th class="table-header__item">Вес палки</th>
+                            <th class="table-header__item">Материал</th>
                         </tr>
-                        <tr class="slider-table__row">
-                            <td class="slider-table__data">8,5 м</td>
-                            <td class="slider-table__data">5 кг</td>
-                            <td class="slider-table__data">Карбон</td>
+                        <tr class="table-data">
+                            <td>8,5 м</td>
+                            <td>5 кг</td>
+                            <td>Карбон</td>
                         </tr>
                     </table>
                 </div>
@@ -137,7 +136,7 @@
                         диету.</p>
                 </div>
                 <div class="slider-item__links">
-                    <a href="#" class="button slider-item__more">Подробнее</a>
+                    <a href="#" class="button">Подробнее</a>
                     <div class="slider-controls">
                         <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">
                         <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control" checked>
@@ -145,12 +144,12 @@
                     </div>
                 </div>
                 <div class="slider-item__specs">
-                    <table class="slider-table">
-                        <tr class="slider-table__header-row">
-                            <th class="slider-table__header">Без подзарядки</th>
+                    <table class="table">
+                        <tr class="table-header">
+                            <th class="table-header__item">Без подзарядки</th>
                         </tr>
-                        <tr class="slider-table__row">
-                            <td class="slider-table__data">48 часов</td>
+                        <tr class="table-data">
+                            <td>48 часов</td>
                         </tr>
                     </table>
                 </div>
@@ -181,14 +180,14 @@
                     </div>
                 </div>
                 <div class="slider-item__specs">
-                    <table class="slider-table">
-                        <tr class="slider-table__header-row">
-                            <th class="slider-table__header">Дальность полета</th>
-                            <th class="slider-table__header">Радиус поражения</th>
+                    <table class="table">
+                        <tr class="table-header">
+                            <th class="table-header__item">Дальность полета</th>
+                            <th class="table-header__item">Радиус поражения</th>
                         </tr>
-                        <tr class="slider-table__row">
-                            <td class="slider-table__data">48 часов</td>
-                            <td class="slider-table__data">50 м</td>
+                        <tr class="table-data">
+                            <td>48 часов</td>
+                            <td>50 м</td>
                         </tr>
                     </table>
                 </div>
@@ -259,9 +258,9 @@
     <section class="services">
         <h2 class="visually-hidden">Сервисы</h2>
         <div class="services-slider">
-            <button type="button" name="service-delivery" class="button services-slider__button services-slider__button--active">Доставка</button>
-            <button type="button" name="service-warranty" class="button services-slider__button">Гарантия</button>
-            <button type="button" name="service-credit" class="button services-slider__button">Кредит</button>
+            <button type="button" name="service-delivery" class="services-slider__button">Доставка</button>
+            <button type="button" name="service-warranty" class="services-slider__button">Гарантия</button>
+            <button type="button" name="service-credit" class="services-slider__button">Кредит</button>
         </div>
         <div class="services-items">
             <div class="services-item services-item__delivery">
@@ -329,19 +328,19 @@
                 многими транспортными компаниями:</p>
             <ul class="contacts-partners">
                 <li class="contacts-partners__item">
-                    <a href="#" class="contacts-partners__link">Деловые линии</a>
+                    <a href="#" class="link contacts-partners__link">Деловые линии</a>
                 </li>
                 <li class="contacts-partners__item">
-                    <a href="#" class="contacts-partners__link">Автотрейдинг</a>
+                    <a href="#" class="link contacts-partners__link">Автотрейдинг</a>
                 </li>
                 <li class="contacts-partners__item">
-                    <a href="#" class="contacts-partners__link">ЖелДорЭкспедиция</a>
+                    <a href="#" class="link contacts-partners__link">ЖелДорЭкспедиция</a>
                 </li>
             </ul>
             <a href="/more" class="button contacts-link">Подробнее о нас</a>
         </div>
         <div class="contacts_item">
-            <h3 class="contacts-label">Адрес</h3>
+            <h3 class="contacts-label">Контакты</h3>
             <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
                 работоспособность покупки. Всякое бывает.</p>
             <img src="img/map.jpg" alt="Карта офиса по адресу улица Строителей, 15" height="222" width="560">
@@ -353,24 +352,25 @@
 <footer class="footer">
     <div class="footer-row">
         <div class="footer-left">
-            <span class="logo footer-logo">Device</span>
+                <a href="index.html" class="link logo">Device</a>
+            </div>
         </div>
         <div class="footer-right">
             <nav class="service-nav">
-                <ul class="service-nav__wrapper">
-                    <li class="service-nav__login--yellow">
-                        <a href="/login" class="service-nav__link">
-                            <span class="service-nav__link-text">Войти</span>
+                <ul class="service-items">
+                    <li class="service-item service-item--login-yellow">
+                        <a href="/login" class="link ">
+                            <span class="service-item__text">Войти</span>
                         </a>
                     </li>
-                    <li class="service-nav__compare--yellow">
-                        <a href="/compare" class="service-nav__link">
-                            <span class="service-nav__link-text">Сравнить</span>
+                    <li class="service-item service-item--compare-yellow">
+                        <a href="/compare" class="link">
+                            <span class="service-item__text">Сравнить</span>
                         </a>
                     </li>
-                    <li class="service-nav__cart-yellow">
-                        <a href="/cart" class="service-nav__link">
-                            <span class="service-nav__link-text">Корзина</span>
+                    <li class="service-item service-item--cart-yellow">
+                        <a href="/cart" class="link">
+                            <span class="service-item__text">Корзина</span>
                         </a>
                     </li>
                 </ul>
@@ -384,18 +384,18 @@
         <div class="footer-center">
             <ul class="footer-service-nav">
                 <li class="footer-service-nav__item">
-                    <a href="/delivery" class="footer-service-nav__link">Доставка</a>
+                    <a href="/delivery" class="link">Доставка</a>
                 </li>
                 <li class="footer-service-nav__item">
-                    <a href="/warranty" class="footer-service-nav__link">Гарантия</a>
+                    <a href="/warranty" class="link">Гарантия</a>
                 </li>
                 <li class="footer-service-nav__item">
-                    <a href="/contacts" class="footer-service-nav__link">Контакты</a>
+                    <a href="/contacts" class="link">Контакты</a>
                 </li>
             </ul>
         </div>
         <div class="footer-right">
-            <a href="tel:+74954959595" class="footer-phone">Тел: + 7 (495) 495-95-95</a>
+            <a href="tel:+74954959595" class="link footer-phone">Тел: + 7 (495) 495-95-95</a>
         </div>
     </div>
     <div class="footer-row">
@@ -404,19 +404,19 @@
         </div>
         <div class="footer-center">
             <ul class="social-icons">
-                <li class="social-icon">
-                    <a href="https://vk.com" aria-label="Facebook" class="social-icons__facebook"></a>
+                <li>
+                    <a href="https://vk.com" aria-label="Facebook" class="social-icon social-icon--facebook"></a>
                 </li>
                 <li>
-                    <a href="https://instagram.com" aria-label="Instagram" class="social-icons__instagram"></a>
+                    <a href="https://instagram.com" aria-label="Instagram" class="social-icon social-icon--instagram"></a>
                 </li>
                 <li>
-                    <a href="https://twitter.com" aria-label="Twitter" class="social-icons__twitter"></a>
+                    <a href="https://twitter.com" aria-label="Twitter" class="social-icon social-icons--twitter"></a>
                 </li>
             </ul>
         </div>
         <div class="footer-right">
-            <a href="https://htmlacademy.ru" aria-label="HTML Academy">
+            <a href="https://htmlacademy.ru" class="link" aria-label="Ссылка на сайт HTML Academy">
                 <img src="img/logo-html.svg" height="35" width="27">
             </a>
         </div>
@@ -427,18 +427,18 @@
     <section class="modal modal-contact">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
-            <p class="contact-item">
-                <label for="contact-name">Ваше имя:</label>
-                <input id="contact-name" name="name" type="text" placeholder="Имя Фамилия" required/>
-            </p>
-            <p class="contact-item">
-                <label for="contact-email">Ваш e-mail:</label>
-                <input id="contact-email" name="email" type="email" placeholder="email@example.com" required/>
-            </p>
-            <p class="contact-item">
-                <label for="contact-text">Текст письма:</label>
-                <textarea id="contact-text" name="text" placeholder="В свободной форме" required></textarea>
-            </p>
+            <div class="contact-item">
+                <label for="contact-name" class="contact-item__label">Ваше имя:</label>
+                <input id="contact-name" class="contact-item__input" name="name" type="text" placeholder="Имя Фамилия" required/>
+            </div>
+            <div class="contact-item">
+                <label for="contact-email" class="contact-item__label">Ваш e-mail:</label>
+                <input id="contact-email" class="contact-item__input" name="email" type="email" placeholder="email@example.com" required/>
+            </div>
+            <div class="contact-item">
+                <label for="contact-text" class="contact-item__label">Текст письма:</label>
+                <textarea id="contact-text" class="contact-item__textarea" name="text" placeholder="В свободной форме" required></textarea>
+            </div>
             <button class="button" type="submit">Отправить</button>
         </form>
         <button class=" modal-close" type="button">Закрыть</button>
