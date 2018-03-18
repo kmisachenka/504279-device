@@ -9,11 +9,12 @@
 <body>
 <header class="header">
     <div class="logo header-logo">
-        <a href="index.html" class="link">Device</a>
+        <a href="#" class="link">Device</a>
     </div>
-    <div class="header-search" tabindex="1">
+    <div class="header-search">
         <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
+            <label for="search" class="search-form__label">Поиск</label>
+            <input id="search" class="search-form__input" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
             <button class="search-form__button" type="submit">Найти</button>
         </form>
     </div>
@@ -21,17 +22,17 @@
     <nav class="service-nav">
         <ul class="service-items">
             <li class="service-item service-item--login">
-                <a href="/login" class="service-item__link">
+                <a href="#" class="service-item__link">
                     <span class="service-item__text">Войти</span>
                 </a>
             </li>
             <li class="service-item service-item--compare">
-                <a href="/compare" class="service-item__link">
+                <a href="#" class="service-item__link">
                     <span class="service-item__text">Сравнить</span>
                 </a>
             </li>
             <li class="service-item service-item--cart">
-                <a href="/cart" class="service-item__link">
+                <a href="#" class="service-item__link">
                     <span class="service-item__text">Корзина</span>
                 </a>
             </li>
@@ -64,13 +65,13 @@
                 </ul>
             </li>
             <li class="site-nav__item">
-                <a class="link" href="/delivery">Доставка</a>
+                <a class="link" href="#">Доставка</a>
             </li>
             <li class="site-nav__item">
-                <a class="link" href="/warranty">Гарантия</a>
+                <a class="link" href="#">Гарантия</a>
             </li>
             <li class="site-nav__item">
-                <a class="link" href="/contacts">Контакты</a>
+                <a class="link" href="#">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -337,7 +338,7 @@
                     <a href="#" class="link contacts-partners__link">ЖелДорЭкспедиция</a>
                 </li>
             </ul>
-            <a href="/more" class="button contacts-link">Подробнее о нас</a>
+            <a href="#" class="button contacts-link">Подробнее о нас</a>
         </div>
         <div class="contacts_item">
             <h3 class="contacts-label">Контакты</h3>
@@ -359,17 +360,17 @@
             <nav class="service-nav">
                 <ul class="service-items">
                     <li class="service-item service-item--login-yellow">
-                        <a href="/login" class="link ">
+                        <a href="#" class="link ">
                             <span class="service-item__text">Войти</span>
                         </a>
                     </li>
                     <li class="service-item service-item--compare-yellow">
-                        <a href="/compare" class="link">
+                        <a href="#" class="link">
                             <span class="service-item__text">Сравнить</span>
                         </a>
                     </li>
                     <li class="service-item service-item--cart-yellow">
-                        <a href="/cart" class="link">
+                        <a href="#" class="link">
                             <span class="service-item__text">Корзина</span>
                         </a>
                     </li>
@@ -384,13 +385,13 @@
         <div class="footer-center">
             <ul class="footer-service-nav">
                 <li class="footer-service-nav__item">
-                    <a href="/delivery" class="link">Доставка</a>
+                    <a href="#" class="link">Доставка</a>
                 </li>
                 <li class="footer-service-nav__item">
-                    <a href="/warranty" class="link">Гарантия</a>
+                    <a href="#" class="link">Гарантия</a>
                 </li>
                 <li class="footer-service-nav__item">
-                    <a href="/contacts" class="link">Контакты</a>
+                    <a href="#" class="link">Контакты</a>
                 </li>
             </ul>
         </div>
@@ -429,15 +430,15 @@
         <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="contact-item">
                 <label for="contact-name" class="contact-item__label">Ваше имя:</label>
-                <input id="contact-name" class="contact-item__input" name="name" type="text" placeholder="Имя Фамилия" required/>
+                <input id="contact-name" class="contact-item__input contact-item__input--text" name="name" type="text" placeholder="Имя Фамилия" required/>
             </div>
             <div class="contact-item">
                 <label for="contact-email" class="contact-item__label">Ваш e-mail:</label>
-                <input id="contact-email" class="contact-item__input" name="email" type="email" placeholder="email@example.com" required/>
+                <input id="contact-email" class="contact-item__input contact-item__input--text" name="email" type="email" placeholder="email@example.com" required/>
             </div>
             <div class="contact-item">
                 <label for="contact-text" class="contact-item__label">Текст письма:</label>
-                <textarea id="contact-text" class="contact-item__textarea" name="text" placeholder="В свободной форме" required></textarea>
+                <textarea id="contact-text" class="contact-item__input contact-item__input--textarea" name="text" placeholder="В свободной форме" required></textarea>
             </div>
             <button class="button" type="submit">Отправить</button>
         </form>

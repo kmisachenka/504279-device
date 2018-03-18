@@ -11,9 +11,10 @@
     <div class="logo header-logo">
         <a href="index.html" class="link">Device</a>
     </div>
-    <div class="header-search" tabindex="1">
+    <div class="header-search">
         <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
+            <label for="search" class="search-form__label">Поиск</label>
+            <input id="search" class="search-form__input" type="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
             <button class="search-form__button" type="submit">Найти</button>
         </form>
     </div>
@@ -21,17 +22,18 @@
     <nav class="service-nav">
         <ul class="service-items">
             <li class="service-item service-item--login">
-                <a href="/login" class="service-item__link">
-                    <span class="service-item__text">Войти</span>
+                <a href="#" class="service-item__link">
+                    <span class="service-item__text">Валентин Петухов</span>
                 </a>
+                <button type="button" class="service-item__logout">Выйти</button>
             </li>
             <li class="service-item service-item--compare">
-                <a href="/compare" class="service-item__link">
+                <a href="#" class="service-item__link">
                     <span class="service-item__text">Сравнить</span>
                 </a>
             </li>
             <li class="service-item service-item--cart">
-                <a href="/cart" class="service-item__link">
+                <a href="#" class="service-item__link">
                     <span class="service-item__text">Корзина</span>
                 </a>
             </li>
@@ -64,13 +66,13 @@
                 </ul>
             </li>
             <li class="site-nav__item">
-                <a class="link" href="/delivery">Доставка</a>
+                <a class="link" href="#">Доставка</a>
             </li>
             <li class="site-nav__item">
-                <a class="link" href="/warranty">Гарантия</a>
+                <a class="link" href="#">Гарантия</a>
             </li>
             <li class="site-nav__item">
-                <a class="link" href="/contacts">Контакты</a>
+                <a class="link" href="#">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -81,7 +83,7 @@
     <ul class="breadcrumbs">
         <li><a class="breadcrumb" href="index.html">Главная</a></li>
         <li><a class="breadcrumb" href="catalog.html">Каталог товаров</a></li>
-        <li class="breadcrumb-current">Моноподы для селфи</li>
+        <li class="breadcrumb--current">Моноподы для селфи</li>
     </ul>
     <section class="filters">
         <h2 class="visually-hidden">Фильтр по каталогу</h2>
@@ -234,17 +236,18 @@
         <nav class="service-nav">
             <ul class="service-items">
                 <li class="service-item service-item--login-yellow">
-                    <a href="/login" class="link ">
-                        <span class="service-item__text">Войти</span>
+                    <a href="#" class="link">
+                        <span class="service-item__text">Валентин Петухов</span>
                     </a>
+                    <button type="button" class="service-item__logout">Выйти</button>
                 </li>
                 <li class="service-item service-item--compare-yellow">
-                    <a href="/compare" class="link">
+                    <a href="#" class="link">
                         <span class="service-item__text">Сравнить</span>
                     </a>
                 </li>
                 <li class="service-item service-item--cart-yellow">
-                    <a href="/cart" class="link">
+                    <a href="#" class="link">
                         <span class="service-item__text">Корзина</span>
                     </a>
                 </li>
@@ -259,13 +262,13 @@
         <div class="footer-center">
             <ul class="footer-service-nav">
                 <li class="footer-service-nav__item">
-                    <a href="/delivery" class="link">Доставка</a>
+                    <a href="#" class="link">Доставка</a>
                 </li>
                 <li class="footer-service-nav__item">
-                    <a href="/warranty" class="link">Гарантия</a>
+                    <a href="#" class="link">Гарантия</a>
                 </li>
                 <li class="footer-service-nav__item">
-                    <a href="/contacts" class="link">Контакты</a>
+                    <a href="#" class="link">Контакты</a>
                 </li>
             </ul>
         </div>
@@ -280,13 +283,13 @@
         <div class="footer-center">
             <ul class="social-icons">
                 <li>
-                    <a href="https://vk.com" aria-label="Facebook" class="social-icon social-icon--facebook"></a>
+                    <a href="#" aria-label="Facebook" class="social-icon social-icon--facebook"></a>
                 </li>
                 <li>
-                    <a href="https://instagram.com" aria-label="Instagram" class="social-icon social-icon--instagram"></a>
+                    <a href="#" aria-label="Instagram" class="social-icon social-icon--instagram"></a>
                 </li>
                 <li>
-                    <a href="https://twitter.com" aria-label="Twitter" class="social-icon social-icons--twitter"></a>
+                    <a href="#" aria-label="Twitter" class="social-icon social-icons--twitter"></a>
                 </li>
             </ul>
         </div>
