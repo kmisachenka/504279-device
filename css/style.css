@@ -148,8 +148,8 @@ body {
 
 .header {
     width: 1160px;
-    min-height: 185px;
-    margin: 40px auto 0;
+    min-height: 186px;
+    margin: 40px auto 110px;
 
     background-color: #f7e296;
 }
@@ -159,13 +159,14 @@ body {
     flex-direction: column;
 
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 
     justify-content: space-between;
 }
 
 .header-wrapper-service {
     display: flex;
+    align-items: center;
 }
 
 .container {
@@ -187,23 +188,40 @@ body {
 
 .logo--header {
     margin-top: -15px;
-    margin-bottom: 29px;
+    margin-bottom: 20px;
 }
 
 .search-form {
+    display: flex;
+    position: relative;
     width: 50%;
+    height: 45px;
 }
 
 .search-form__button {
     display: none;
+    position: relative;
+}
+
+.search-form__button:focus::before,
+.search-form__button:active::before {
+    position: absolute;
+    content: '';
+    width: 357px;
+    height: 2px;
+    left: -357px;
+    top: 45px;
+    background-color: #000000;
 }
 
 .search-form__input {
+    display: inline-block;
     line-height: 23px;
 
-    height: 45px;
+    height: 49px;
+    width: 355px;
     margin: 0;
-    padding: 10px;
+    padding: 6px 10px 10px 38px;
 
     border: none;
     background-color: #f7e296;
@@ -211,24 +229,24 @@ body {
 
 .search-form__input:focus {
     line-height: 25px;
-
+    padding-top: 8px;
     color: black;
     border-bottom: 2px solid #000;
+    outline: none;
 }
 
 .search-form__label {
     font-size: 0;
-
+    align-self: center;
     display: inline-block;
+    position: absolute;
 
-    box-sizing: content-box;
-    margin-left: 10px;
 }
 
 .search-form__label::before {
     position: relative;
-    top: -3px;
-    left: -4px;
+    top: 10px;
+    left: 3px;
 
     display: inline-block;
 
@@ -244,8 +262,9 @@ body {
 .search-form__input:focus + .search-form__button {
     display: inline-block;
 
-    height: 45px;
-    padding: 10px;
+    height: 49px;;
+    padding-left: 20px;
+    padding-right: 20px;
 
     color: #000;
     border: 2px solid #000;
@@ -260,19 +279,26 @@ body {
 .search-form__button:active {
     display: inline-block;
 
-    height: 45px;
-    padding: 10px;
+    height: 49px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     color: #6a6a6a;
     border: 2px solid #000;
     background-color: #000;
+    outline: none;
 }
+
+
+
 
 .search-form__button:active::placeholder {
     opacity: .5;
 }
 
 .search-form__input::placeholder {
+    margin: 0;
+    padding: 0;
     opacity: .3;
 }
 
@@ -388,7 +414,7 @@ body {
 
 .header-wrapper-menu {
     width: 100%;
-    margin-bottom: 160px;
+
 }
 
 .catalog-link {
@@ -438,6 +464,14 @@ body {
     width: 50%;
 }
 
+.dropdown {
+    display: none;
+}
+
+.site-nav__item:first-child {
+    position: relative;
+}
+
 .site-nav__item:nth-child(2) {
     margin-right: 35px;
     margin-left: 20px;
@@ -448,31 +482,71 @@ body {
 }
 
 
-.site-nav__dropdown {
+.dropdown {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 15px;
     font-weight: 300;
     line-height: 36px;
 
+    position: absolute;
+    left: -60px;
+
     display: none;
 
+    width: 1160px;
+
     margin: 0;
-    padding: 0;
+    padding: 20px 60px 32px;
+
+    z-index: 1;
+
+    background-color: #f7e296;
 
     list-style: none;
 
     letter-spacing: .01em;
     text-transform: initial;
+
+}
+
+.dropdown-item {
+    width: 200px;
+}
+
+.dropdown-item:first-child {
+    margin-right: 40px;
+}
+
+.sub-dropdown {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.site-nav__item:first-child:hover .dropdown,
+.site-nav__item:first-child:focus .dropdown,
+.site-nav__item:first-child:active .dropdown {
+    display: flex;
 }
 
 /* Слайдер */
 
 .promo {
     display: block;
-
+    position: relative;
     width: 1060px;
     height: 482px;
     margin: 0 auto;
+}
+
+.promo::before {
+    position: absolute;
+    content: '';
+    top: -110px;
+    left: -50px;
+    width: 1160px;
+    height: 113px;
+    background-color: #f7e296;
 }
 
 .promo-item {
@@ -504,7 +578,7 @@ body {
 
 .promo-description::before {
     position: absolute;
-    top: 37px;
+    top: 39px;
 
     width: 100px;
     height: 7px;
@@ -520,8 +594,8 @@ body {
     line-height: 179px;
 
     position: absolute;
-    top: -15px;
-    right: -13px;
+    top: -12px;
+    right: -14px;
 
     content: '01';
 
