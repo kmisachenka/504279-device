@@ -10,7 +10,9 @@
 <header class="header">
     <div class="container">
         <div class="header-wrapper-top">
-            <a href="#" class="logo logo--header link">Device</a>
+            <div class="header-logo">
+                <a href="#" class="logo logo--header link">Device</a>
+            </div>
             <div class="header-wrapper-service">
                 <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
                     <label for="search" class="search-form__label">Поиск</label>
@@ -20,18 +22,21 @@
                 </form>
                 <nav class="service-nav">
                     <ul class="service-items">
-                        <li class="service-item service-item--login">
-                            <a href="#" class="service-item__link">
-                                <span class="service-item__text">Войти</span>
+                        <li class="service-item">
+                            <a href="#" class="service-item__link service-item--login">
+                                <span class="service-item__text">Валентин Петухов</span>
+                            </a>
+                            <a href="#" class="service-item__link service-item--logout">
+                                <span class="service-item__text">Выйти</span>
                             </a>
                         </li>
-                        <li class="service-item service-item--compare">
-                            <a href="#" class="service-item__link">
+                        <li class="service-item">
+                            <a href="#" class="service-item__link service-item--compare">
                                 <span class="service-item__text">Сравнить</span>
                             </a>
                         </li>
-                        <li class="service-item service-item--cart">
-                            <a href="#" class="service-item__link">
+                        <li class="service-item">
+                            <a href="#" class="service-item__link service-item--cart">
                                 <span class="service-item__text">Корзина</span>
                             </a>
                         </li>
@@ -255,18 +260,21 @@
                 <a href="index.html" class="link logo">Device</a>
                 <nav class="service-nav">
                     <ul class="service-items">
-                        <li class="service-item service-item--login-yellow">
-                            <a href="#" class="link ">
-                                <span class="service-item__text">Войти</span>
+                        <li class="service-item">
+                            <a href="#" class="link service-item__link service-item--login-yellow">
+                                <span class="service-item__text">Валентин Петухов</span>
+                            </a>
+                            <a href="#" class="link service-item__link service-item--logout">
+                                <span class="service-item__text">Выйти</span>
                             </a>
                         </li>
-                        <li class="service-item service-item--compare-yellow">
-                            <a href="#" class="link">
-                                <span class="service-item__text">Сравнить</span>
+                        <li class="service-item">
+                            <a href="#" class="link service-item__link service-item--compare-yellow">
+                                <span class="service-item__text ">Сравнить</span>
                             </a>
                         </li>
-                        <li class="service-item service-item--cart-yellow">
-                            <a href="#" class="link">
+                        <li class="service-item">
+                            <a href="#" class="link service-item__link service-item--cart-yellow">
                                 <span class="service-item__text">Корзина</span>
                             </a>
                         </li>
@@ -287,7 +295,9 @@
                         <a href="#" class="link">Контакты</a>
                     </li>
                 </ul>
-                <a href="tel:+74954959595" class="link footer-phone">Тел: + 7 (495) 495-95-95</a>
+                <div class="footer-phone">
+                    <a href="tel:+74954959595" class="link">Тел: + 7 (495) 495-95-95</a>
+                </div>
             </div>
             <div class="row-bottom">
                 <span class="footer-line"></span>

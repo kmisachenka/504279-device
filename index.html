@@ -10,7 +10,9 @@
 <header class="header">
     <div class="container">
         <div class="header-wrapper-top">
-            <a href="#" class="logo logo--header link">Device</a>
+            <div class="header-logo">
+                <a href="#" class="logo logo--header link">Device</a>
+            </div>
             <div class="header-wrapper-service">
                 <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
                     <label for="search" class="search-form__label">Поиск</label>
@@ -20,18 +22,18 @@
                 </form>
                 <nav class="service-nav">
                     <ul class="service-items">
-                        <li class="service-item service-item--login">
-                            <a href="#" class="service-item__link">
+                        <li class="service-item">
+                            <a href="#" class="service-item__link service-item--login">
                                 <span class="service-item__text">Войти</span>
                             </a>
                         </li>
-                        <li class="service-item service-item--compare">
-                            <a href="#" class="service-item__link">
+                        <li class="service-item">
+                            <a href="#" class="service-item__link service-item--compare">
                                 <span class="service-item__text">Сравнить</span>
                             </a>
                         </li>
-                        <li class="service-item service-item--cart">
-                            <a href="#" class="service-item__link">
+                        <li class="service-item">
+                            <a href="#" class="service-item__link service-item--cart">
                                 <span class="service-item__text">Корзина</span>
                             </a>
                         </li>
@@ -42,7 +44,7 @@
         <div class="header-wrapper-menu">
             <nav class="site-nav">
                 <ul class="site-nav__items">
-                    <li class="site-nav__item site-nav__item--catalog">
+                    <li class="site-nav__item">
                         <a class="link catalog-link" href="catalog.html">Каталог товаров</a>
                         <ul class="dropdown">
                             <li class="dropdown-item">
@@ -77,6 +79,7 @@
                                 </ul>
                             </li>
                         </ul>
+
                     </li>
                     <li class="site-nav__item">
                         <a class="link" href="#">Доставка</a>
@@ -98,11 +101,15 @@
     <h1 class="visually-hidden">Главная страница магазина Device</h1>
     <section class="promo">
         <h2 class="visually-hidden">Промо-товары</h2>
-        <div class="promo-item promo-selfie">
+
+
+        <div class="promo-item" style="display: none">
             <h3 class="visually-hidden">Селфи-палка</h3>
-            <img class="promo-selfie__image" src="img/slider-1.png" height="486" width="384"
-                 alt="Восьмиметровая селфи палка! Делай селфи, как Бен Стиллер!">
-            <div class="promo-description">
+            <div class="promo-image-wrapper">
+                <img class="promo-image promo-image--selfie-stick" src="img/slider-1.png" height="486" width="384"
+                     alt="Восьмиметровая селфи палка! Делай селфи, как Бен Стиллер!">
+            </div>
+            <div class="promo-description promo-description--zero-one">
                 <div class="promo-slogan">
                     <p class="promo-description__label">Делай селфи,<br>как Бен Стиллер!</p>
                     <p class="promo-description__text">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь
@@ -131,102 +138,84 @@
                             <div class="table-data__item">Карбон</div>
                         </div>
                     </div>
-
-                    <!--<table class="table">-->
-                    <!--<tr class="table-header">-->
-                    <!--<th class="table-header__item">Длина палки</th>-->
-                    <!--<th class="table-header__item">Вес палки</th>-->
-                    <!--<th class="table-header__item">Материал</th>-->
-                    <!--</tr>-->
-                    <!--<tr class="table-data">-->
-                    <!--<td class="table-data__item">8,5 м</td>-->
-                    <!--<td class="table-data__item">5 кг</td>-->
-                    <!--<td class="table-data__item">Карбон</td>-->
-                    <!--</tr>-->
-                    <!--</table>-->
                 </div>
             </div>
-
-            <!--<div class="slider-item" style="display: none;">-->
-            <!--<h3 class="visually-hidden">Фитнес-браслет</h3>-->
-            <!--<div class="slider-item__image">-->
-            <!--<img class="slider-item__image" src="img/slider-2.png" height="485" width="345"-->
-            <!--alt="Мотивирующие фитнес браслеты! Худеем правильно!">-->
-            <!--</div>-->
-            <!--<div class="slider-item__description">-->
-            <!--<div class="slider-item__header">-->
-            <!--<span class="slider-item__line"></span>-->
-            <!--<span class="slider-item__number">02</span>-->
-            <!--</div>-->
-            <!--<div class="slider-item__info">-->
-            <!--<p class="slider-item__label">Худеем правильно!</p>-->
-            <!--<p class="slider-item__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не-->
-            <!--пропускать занятия и соблюдать-->
-            <!--диету.</p>-->
-            <!--</div>-->
-            <!--<div class="slider-item__links">-->
-            <!--<a href="#" class="button">Подробнее</a>-->
-            <!--<div class="slider-controls">-->
-            <!--<input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">-->
-            <!--<input type="radio" name="slider_control" value="slider-2" class="slider-controls__control"-->
-            <!--checked>-->
-            <!--<input type="radio" name="slider_control" value="slider-3" class="slider-controls__control">-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="slider-item__specs">-->
-            <!--<table class="table">-->
-            <!--<tr class="table-header">-->
-            <!--<th class="table-header__item">Без подзарядки</th>-->
-            <!--</tr>-->
-            <!--<tr class="table-data">-->
-            <!--<td>48 часов</td>-->
-            <!--</tr>-->
-            <!--</table>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="slider-item" style="display: none;">-->
-            <!--<h3 class="visually-hidden">Квадрокоптер</h3>-->
-            <!--<div class="slider-item__image">-->
-            <!--<img class="slider-item__image" src="img/slider-3.png" height="334" width="526"-->
-            <!--alt="Квадрокоптер с лазером! Порхает как бабочка, жалит как пчела!">-->
-            <!--</div>-->
-            <!--<div class="slider-item__description">-->
-            <!--<div class="slider-item__header">-->
-            <!--<span class="slider-item__line"></span>-->
-            <!--<span class="slider-item__number">03</span>-->
-            <!--</div>-->
-            <!--<div class="slider-item__info">-->
-            <!--<p class="slider-item__label">Порхает как бабочка, жалит как пчела!</p>-->
-            <!--<p class="slider-item__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным-->
-            <!--лазером, замаскированным под-->
-            <!--стандартную камеру.</p>-->
-            <!--</div>-->
-            <!--<div class="slider-item__links">-->
-            <!--<a href="#" class="button slider-item__more">Подробнее</a>-->
-            <!--<div class="slider-controls">-->
-            <!--<input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">-->
-            <!--<input type="radio" name="slider_control" value="slider-2" class="slider-controls__control">-->
-            <!--<input type="radio" name="slider_control" value="slider-3" class="slider-controls__control"-->
-            <!--checked>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="slider-item__specs">-->
-            <!--<table class="table">-->
-            <!--<tr class="table-header">-->
-            <!--<th class="table-header__item">Дальность полета</th>-->
-            <!--<th class="table-header__item">Радиус поражения</th>-->
-            <!--</tr>-->
-            <!--<tr class="table-data">-->
-            <!--<td>48 часов</td>-->
-            <!--<td>50 м</td>-->
-            <!--</tr>-->
-            <!--</table>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--</div>-->
         </div>
+
+
+        <div class="promo-item" style="display: none;">
+            <h3 class="visually-hidden">Фитнес-браслет</h3>
+            <div class="promo-image-wrapper">
+                <img class="promo-image promo-image--fitness-tracker" src="img/slider-2.png" height="485" width="345"
+                     alt="Мотивирующие фитнес браслеты! Худеем правильно!">
+            </div>
+            <div class="promo-description promo-description--zero-two">
+                <div class="promo-slogan">
+                    <p class="promo-description__label">Худеем<br>правильно!</p>
+                    <p class="promo-description__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не
+                        пропускать занятия и соблюдать
+                        диету.</p>
+                </div>
+                <div class="promo-controls">
+                    <a href="#" class="promo-button button">Подробнее</a>
+                    <div class="promo-radio">
+                        <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control"
+                               checked>
+                        <input type="radio" name="slider_control" value="slider-3" class="slider-controls__control">
+                    </div>
+                </div>
+                <div class="promo-table">
+                    <div class="table">
+                        <div class="table-header">
+                            <div class="table-header__item">Без подзарядки</div>
+                        </div>
+                        <div class="table-data">
+                            <div class="table-data__item">48 часов</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="promo-item">
+            <h3 class="visually-hidden">Квадрокоптер</h3>
+            <div class="promo-image-wrapper">
+                <img class="promo-image promo-image--drone" src="img/slider-3.png" height="334" width="526"
+                     alt="Квадрокоптер с лазером! Порхает как бабочка, жалит как пчела!">
+            </div>
+            <div class="promo-description promo-description--zero-three">
+                <div class="promo-slogan">
+                    <p class="promo-description__label">Порхает как бабочка, жалит как пчела!</p>
+                    <p class="promo-description__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
+                        лазером, замаскированным под
+                        стандартную камеру.</p>
+                </div>
+                <div class="promo-controls">
+                    <a href="#" class="button promo-button">Подробнее</a>
+                    <div class="promo-radio">
+                        <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control">
+                        <input type="radio" name="slider_control" value="slider-3" class="slider-controls__control"
+                               checked>
+                    </div>
+                </div>
+                <div class="promo-table">
+                    <div class="table">
+                        <div class="table-header">
+                            <div class="table-header__item">Дальность полета</div>
+                            <div class="table-header__item">Радиус поражения</div>
+                        </div>
+                        <div class="table-data">
+                            <div class="table-data__item">800 м</div>
+                            <div class="table-data__item">50 м</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <section class="popular">
@@ -294,44 +283,43 @@
             <h2 class="visually-hidden">Сервисы</h2>
             <div class="services-wrapper">
                 <div class="services-controls">
-                    <label for="delivery" class="services-button services-button--active">Доставка</label>
+                    <label for="delivery" class="button">Доставка</label>
                     <input type="radio" name="services-radio" id="delivery" class="services-input visually-hidden"
                            checked>
-                    <label for="warranty" class="services-button">Гарантия</label>
+                    <label for="warranty" class="button">Гарантия</label>
                     <input type="radio" name="services-radio" id="warranty" class="services-input visually-hidden">
-                    <label for="credit" class="services-button">Кредит</label>
+                    <label for="credit" class="button services-button--active">Кредит</label>
                     <input type="radio" name="services-radio" id="credit" class="services-input visually-hidden">
                 </div>
                 <div class="services-items">
-                    <div class="services-item ">
+                    <div class="services-item" style="display: none">
                         <div class="services-item__description services-item__delivery">
                             <h3 class="services-item__label">Доставка</h3>
                             <p class="services-item__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
                                 совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                         </div>
-                        <span class="services-item__delivery-icon"></span>
                     </div>
-                    <!--<div class="services-item services-item__warranty">-->
-                    <!--<div class="services-item__description">-->
-                    <!--<h3 class="services-item__label">Гарантия</h3>-->
-                    <!--<p class="services-item__text">Если из-за возгорания купленного у нас товара у вас сгорит-->
-                    <!--дом —-->
-                    <!--не-->
-                    <!--переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>-->
-                    <!--</div>-->
-                    <!--<span class="services-item__warranty-icon"></span>-->
-                    <!--</div>-->
-                    <!--<div class="services-item services-item__credit">-->
-                    <!--<div class="services-item__description">-->
-                    <!--<h3 class="services-item__label">Кредит</h3>-->
-                    <!--<p class="services-item__text">Залезть в долговую яму стало проще! Кредитные консультанты-->
-                    <!--подберут-->
-                    <!--для-->
-                    <!--вас наиболее выгодные-->
-                    <!--условия кредита. Выгодные для нашего банка, разумеется.</p>-->
-                    <!--</div>-->
-                    <!--<span class="services-item__credit-icon"></span>-->
-                    <!--</div>-->
+                    <div class="services-item" style="display: none">
+                        <div class="services-item__description services-item__warranty">
+                            <h3 class="services-item__label">Гарантия</h3>
+                            <p class="services-item__text">Если из-за возгорания купленного у нас товара у вас сгорит
+                                дом —
+                                не
+                                переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                        </div>
+                        <span class="services-item__warranty-icon"></span>
+                    </div>
+                    <div class="services-item" >
+                        <div class="services-item__description services-item__credit">
+                            <h3 class="services-item__label">Кредит</h3>
+                            <p class="services-item__text">Залезть в долговую яму стало проще! Кредитные консультанты
+                                подберут
+                                для
+                                вас наиболее выгодные
+                                условия кредита. Выгодные для нашего банка, разумеется.</p>
+                        </div>
+                        <span class="services-item__credit-icon"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -412,18 +400,18 @@
                 <a href="index.html" class="link logo">Device</a>
                 <nav class="service-nav">
                     <ul class="service-items">
-                        <li class="service-item service-item--login-yellow">
-                            <a href="#" class="link ">
+                        <li class="service-item">
+                            <a href="#" class="link service-item__link service-item--login-yellow">
                                 <span class="service-item__text">Войти</span>
                             </a>
                         </li>
-                        <li class="service-item service-item--compare-yellow">
-                            <a href="#" class="link">
-                                <span class="service-item__text">Сравнить</span>
+                        <li class="service-item">
+                            <a href="#" class="link service-item__link service-item--compare-yellow">
+                                <span class="service-item__text ">Сравнить</span>
                             </a>
                         </li>
-                        <li class="service-item service-item--cart-yellow">
-                            <a href="#" class="link">
+                        <li class="service-item">
+                            <a href="#" class="link service-item__link service-item--cart-yellow">
                                 <span class="service-item__text">Корзина</span>
                             </a>
                         </li>
@@ -444,7 +432,9 @@
                         <a href="#" class="link">Контакты</a>
                     </li>
                 </ul>
-                <a href="tel:+74954959595" class="link footer-phone">Тел: + 7 (495) 495-95-95</a>
+                <div class="footer-phone">
+                    <a href="tel:+74954959595" class="link">Тел: + 7 (495) 495-95-95</a>
+                </div>
             </div>
             <div class="row-bottom">
                 <span class="footer-line"></span>
@@ -468,41 +458,41 @@
             </div>
         </div>
     </div>
+
 </footer>
 
-<!--<div class="modal-wrapper">-->
-<!--<section class="modal modal-contact">-->
-<!--<h2 class="visually-hidden">Форма обратной связи</h2>-->
-<!--<form class="contact-form" action="https://echo.htmlacademy.ru" method="post">-->
-<!--<div class="contact-item">-->
-<!--<label for="contact-name" class="contact-item__label">Ваше имя:</label>-->
-<!--<input id="contact-name" class="contact-item__input contact-item__input&#45;&#45;text" name="name" type="text"-->
-<!--placeholder="Имя Фамилия" required/>-->
-<!--</div>-->
-<!--<div class="contact-item">-->
-<!--<label for="contact-email" class="contact-item__label">Ваш e-mail:</label>-->
-<!--<input id="contact-email" class="contact-item__input contact-item__input&#45;&#45;text" name="email"-->
-<!--type="email" placeholder="email@example.com" required/>-->
-<!--</div>-->
-<!--<div class="contact-item">-->
-<!--<label for="contact-text" class="contact-item__label">Текст письма:</label>-->
-<!--<textarea id="contact-text" class="contact-item__input contact-item__input&#45;&#45;textarea" name="text"-->
-<!--placeholder="В свободной форме" required></textarea>-->
-<!--</div>-->
-<!--<button class="button" type="submit">Отправить</button>-->
-<!--</form>-->
-<!--<button class=" modal-close" type="button">Закрыть</button>-->
-<!--</section>-->
-<!--</div>-->
+<section class="modal modal-contact">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <button class=" modal-close" type="button">Закрыть</button>
+    <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="contact-item">
+            <label for="contact-name" class="contact-item__label">Ваше имя:</label>
+            <input id="contact-name" class="contact-item__input contact-item__input--text" name="name" type="text"
+                   placeholder="Имя Фамилия" required/>
+        </div>
+        <div class="contact-item">
+            <label for="contact-email" class="contact-item__label">Ваш e-mail:</label>
+            <input id="contact-email" class="contact-item__input contact-item__input--text" name="email"
+                   type="email" placeholder="email@example.com" required/>
+        </div>
+        <div class="contact-item">
+            <label for="contact-text" class="contact-item__label">Текст письма:</label>
+            <textarea id="contact-text" class="contact-item__input contact-item__input--textarea" name="text"
+                      placeholder="В свободной форме" required></textarea>
+        </div>
+        <button class="button" type="submit">Отправить</button>
+    </form>
+</section>
 
-<!--<div class="modal-wrapper">-->
-<!--<section class="modal  modal-map">-->
-<!--<h2 class="visually-hidden">Как до нас добраться</h2>-->
-<!--<p>-->
-<!--<img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу улица Строителей, 15">-->
-<!--</p>-->
-<!--<button class="modal-close" type="button">Закрыть</button>-->
-<!--</section>-->
-<!--</div>-->
+
+<div class="modal-wrapper">
+    <section class="modal  modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+            <img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу улица Строителей, 15">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
+</div>
 </body>
 </html>
