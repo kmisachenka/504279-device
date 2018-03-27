@@ -79,7 +79,6 @@
                                 </ul>
                             </li>
                         </ul>
-
                     </li>
                     <li class="site-nav__item">
                         <a class="link" href="#">Доставка</a>
@@ -283,23 +282,29 @@
             <h2 class="visually-hidden">Сервисы</h2>
             <div class="services-wrapper">
                 <div class="services-controls">
-                    <label for="delivery" class="button">Доставка</label>
-                    <input type="radio" name="services-radio" id="delivery" class="services-input visually-hidden"
-                           checked>
-                    <label for="warranty" class="button">Гарантия</label>
-                    <input type="radio" name="services-radio" id="warranty" class="services-input visually-hidden">
-                    <label for="credit" class="button services-button--active">Кредит</label>
-                    <input type="radio" name="services-radio" id="credit" class="services-input visually-hidden">
+                    <label class="button delivery services-button--active">
+                        <span>Доставка</span>
+                        <input type="radio" name="services-radio" class="services-input visually-hidden" checked>
+                    </label>
+                    <label class="button warranty">
+                        <span>Гарантия</span>
+                        <input type="radio" name="services-radio" class="services-input visually-hidden">
+                    </label>
+                    <label class="button credit">
+                        <span>Кредит</span>
+                        <input type="radio" name="services-radio" class="services-input visually-hidden">
+                    </label>
+
                 </div>
                 <div class="services-items">
-                    <div class="services-item" style="display: none">
+                    <div class="services-item service-item--delivery services-item--active">
                         <div class="services-item__description services-item__delivery">
                             <h3 class="services-item__label">Доставка</h3>
                             <p class="services-item__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
                                 совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                         </div>
                     </div>
-                    <div class="services-item" style="display: none">
+                    <div class="services-item service-item--warranty">
                         <div class="services-item__description services-item__warranty">
                             <h3 class="services-item__label">Гарантия</h3>
                             <p class="services-item__text">Если из-за возгорания купленного у нас товара у вас сгорит
@@ -309,7 +314,7 @@
                         </div>
                         <span class="services-item__warranty-icon"></span>
                     </div>
-                    <div class="services-item" >
+                    <div class="services-item service-item--credit">
                         <div class="services-item__description services-item__credit">
                             <h3 class="services-item__label">Кредит</h3>
                             <p class="services-item__text">Залезть в долговую яму стало проще! Кредитные консультанты
@@ -377,7 +382,7 @@
                             <a href="#" class="link contacts-partners__link">ЖелДорЭкспедиция</a>
                         </li>
                     </ul>
-                    <a href="#" class="button contacts-link">Подробнее о нас</a>
+                    <a href="#" class="button contacts-link more-about-us">Подробнее о нас</a>
                 </div>
                 <div class="contacts-item">
                     <h3 class="contacts-label">Контакты</h3>
@@ -386,7 +391,7 @@
                         работоспособность покупки. Всякое бывает.</p>
                     <img src="img/map.jpg" class="contacts-map" alt="Карта офиса по адресу улица Строителей, 15"
                          height="222" width="560">
-                    <a href="#" class="button contacts-link">Напишите нам</a>
+                    <a href="#" class="button contacts-link map-link">Напишите нам</a>
                 </div>
             </div>
         </div>
@@ -467,32 +472,34 @@
     <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="contact-item">
             <label for="contact-name" class="contact-item__label">Ваше имя:</label>
-            <input id="contact-name" class="contact-item__input contact-item__input--text" name="name" type="text"
-                   placeholder="Имя Фамилия" required/>
+            <input id="contact-name" class="contact-item__input contact-item__input--text" name="login" type="text"
+                   placeholder="Имя Фамилия"/>
         </div>
         <div class="contact-item">
             <label for="contact-email" class="contact-item__label">Ваш e-mail:</label>
             <input id="contact-email" class="contact-item__input contact-item__input--text" name="email"
-                   type="email" placeholder="email@example.com" required/>
+                   type="email" placeholder="email@example.com"/>
         </div>
         <div class="contact-item">
             <label for="contact-text" class="contact-item__label">Текст письма:</label>
             <textarea id="contact-text" class="contact-item__input contact-item__input--textarea" name="text"
-                      placeholder="В свободной форме" required></textarea>
+                      placeholder="В свободной форме"></textarea>
         </div>
         <button class="button" type="submit">Отправить</button>
     </form>
 </section>
 
 
-<div class="modal-wrapper">
-    <section class="modal  modal-map">
-        <h2 class="visually-hidden">Как до нас добраться</h2>
-        <p>
-            <img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу улица Строителей, 15">
-        </p>
-        <button class="modal-close" type="button">Закрыть</button>
-    </section>
-</div>
+<section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <button class="modal-close" type="button">Закрыть</button>
+    <iframe class="map-frame" src="https://yandex.com/map-widget/v1/-/CBetjAD68B" width="960" height="560"
+            frameborder="0"></iframe>
+    <img class="map-image" src="img/map.jpg" width="560" height="222"
+         alt="Офис компании по адресу улица Строителей, 15">
+</section>
+<div class="modal-overlay"></div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
