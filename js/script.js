@@ -1,58 +1,58 @@
-const moreAboutUsLink = document.querySelector('.more-about-us');
-const contacts = document.querySelector('.modal-contact');
-const overlay = document.querySelector('.modal-overlay');
-const closeContactsButton = contacts.querySelector('.modal-close');
+var moreAboutUsLink = document.querySelector('.more-about-us');
+var contacts = document.querySelector('.modal-contact');
+var overlay = document.querySelector('.modal-overlay');
+var closeContactsButton = contacts.querySelector('.modal-close');
 
-const contactsForm = contacts.querySelector('.contact-form');
-const loginInput = contacts.querySelector('[name=login]');
-const emailInput = contacts.querySelector('[name=email]');
-const textInput = contacts.querySelector('[name=text]');
-const inputs = contacts.querySelectorAll('.contact-item__input');
+var contactsForm = contacts.querySelector('.contact-form');
+var loginInput = contacts.querySelector('[name=login]');
+var emailInput = contacts.querySelector('[name=email]');
+var textInput = contacts.querySelector('[name=text]');
+var inputs = contacts.querySelectorAll('.contact-item__input');
 
-const mapLink = document.querySelector('.map-link');
-const mapModal = document.querySelector('.modal-map');
-const mapClose = mapModal.querySelector('.modal-close');
+var mapLink = document.querySelector('.map-link');
+var mapModal = document.querySelector('.modal-map');
+var mapClose = mapModal.querySelector('.modal-close');
 
-const removeElementClassIfExist = (element, clazz) => {
+var removeElementClassIfExist = function (element, clazz) {
     if (element.classList.contains(clazz)) {
         element.classList.remove(clazz);
     }
 };
 
-const showOverlay = () => {
+var showOverlay = function () {
     overlay.classList.add('modal-overlay--show');
 };
 
-const hideOverlay = () => {
+var hideOverlay = function () {
     overlay.classList.remove('modal-overlay--show');
 };
 
-const showModal = modal => {
+var showModal = function (modal) {
     modal.classList.add('modal-show');
     showOverlay();
 };
 
-const hideModal = modal => {
+var hideModal = function (modal) {
     modal.classList.remove('modal-show');
     hideOverlay();
 };
 
-const clearInputs = () => {
-    inputs.forEach(input => {
-        if (input.value) {
-            input.value = '';
+var clearInputs = function () {
+    for (var i = 0; inputs.length > 0; i++) {
+        if (inputs[i].value) {
+            inputs[i].value = '';
         }
-        removeElementClassIfExist(input, 'contact-item__input--error');
-    });
+        removeElementClassIfExist(inputs[i], 'contact-item__input--error');
+    }
 };
 
-const hideOverlayIfActive = modal => {
+var hideOverlayIfActive = function (modal) {
     if (modal.classList.contains('modal-show')) {
         hideModal(modal);
     }
 };
 
-window.addEventListener("keydown", event => {
+window.addEventListener("keydown", function (event) {
     if (event.keyCode === 27) {
         event.preventDefault();
         hideOverlayIfActive(contacts);
@@ -61,52 +61,52 @@ window.addEventListener("keydown", event => {
     }
 });
 
-overlay.addEventListener('click', event => {
+overlay.addEventListener('click', function (event) {
     event.preventDefault();
     hideOverlayIfActive(contacts);
     hideOverlayIfActive(mapModal);
     clearInputs();
 });
 
-moreAboutUsLink.addEventListener('click', event => {
+moreAboutUsLink.addEventListener('click', function (event) {
     event.preventDefault();
     showModal(contacts);
     loginInput.focus();
 });
 
-closeContactsButton.addEventListener('click', event => {
+closeContactsButton.addEventListener('click', function (event) {
    event.preventDefault();
    hideModal(contacts);
    removeElementClassIfExist(contacts, 'modal-error');
    clearInputs();
 });
 
-const hightlightIfInvalid = input => {
-  const { value } = input;
+var highlightIfInvalid = function (input) {
+  var value = input.value;
   if (!value || value.length === 0) {
       input.classList.add('contact-item__input--error');
   }
 };
 
-contactsForm.addEventListener('submit', event => {
+contactsForm.addEventListener('submit', function (event) {
     if (!loginInput.value || !emailInput.value || !textInput.value) {
         event.preventDefault();
         contacts.classList.remove("modal-error");
         void contacts.offsetWidth;
         contacts.classList.add('modal-error');
 
-        hightlightIfInvalid(loginInput);
-        hightlightIfInvalid(emailInput);
-        hightlightIfInvalid(textInput);
+        highlightIfInvalid(loginInput);
+        highlightIfInvalid(emailInput);
+        highlightIfInvalid(textInput);
     }
 });
 
-mapLink.addEventListener('click', event => {
+mapLink.addEventListener('click', function (event) {
     event.preventDefault();
     showModal(mapModal);
 });
 
-mapClose.addEventListener('click', event => {
+mapClose.addEventListener('click', function (event) {
     event.preventDefault();
     hideModal(mapModal);
 });
@@ -114,25 +114,26 @@ mapClose.addEventListener('click', event => {
 
 /* Слайдер сервисов */
 
-const deliveryButton = document.querySelector('.delivery');
-const warrantyButton = document.querySelector('.warranty');
-const creditButton = document.querySelector('.credit');
+var deliveryButton = document.querySelector('.delivery');
+var warrantyButton = document.querySelector('.warranty');
+var creditButton = document.querySelector('.credit');
 
-const deliveryItem = document.querySelector('.service-item--delivery');
-const warrantyItem = document.querySelector('.service-item--warranty');
-const creditItem = document.querySelector('.service-item--credit');
+var deliveryItem = document.querySelector('.service-item--delivery');
+var warrantyItem = document.querySelector('.service-item--warranty');
+var creditItem = document.querySelector('.service-item--credit');
 
-const deactivateButtons = () => {
-  Array.of(deliveryButton, warrantyButton, creditButton).forEach(button => {
-     button.classList.remove('services-button--active');
-  });
-  Array.of(deliveryItem, warrantyItem, creditItem).forEach(item => {
-      item.classList.remove('services-item--active');
-  })
+var deactivateButtons = function () {
+    [deliveryButton, warrantyButton, creditButton].map(function (button) {
+        button.classList.remove('services-button--active');
+    });
+
+    [deliveryItem, warrantyItem, creditItem].map(function (item) {
+        item.classList.remove('services-item--active');
+    });
 };
 
-const activateButtonOnClick = (button, item) => {
-    button.addEventListener('click', event => {
+var activateButtonOnClick = function (button, item) {
+    button.addEventListener('click', function (event) {
         event.preventDefault();
         deactivateButtons();
         button.classList.add('services-button--active');
@@ -144,7 +145,40 @@ activateButtonOnClick(deliveryButton, deliveryItem);
 activateButtonOnClick(warrantyButton, warrantyItem);
 activateButtonOnClick(creditButton, creditItem);
 
+/* Основной слайдер */
 
+var selfieInput = document.querySelector('#selfie');
+var selfieItem = document.querySelector('.promo-selfie');
 
+selfieInput.classList.add('promo-slider__input--checked');
+
+var fitnessTrackerInput = document.querySelector('#fitness-tracker');
+var fitnessTrackerItem = document.querySelector('.promo-fitness-tracker');
+
+var droneInput = document.querySelector('#drone');
+var droneItem = document.querySelector('.promo-drone');
+
+var flushSliderState = function () {
+    [selfieInput, fitnessTrackerInput, droneInput].map(function (input) {
+        removeElementClassIfExist(input, 'promo-slider__input--checked');
+    });
+    [selfieItem, fitnessTrackerItem, droneItem].map(function (item) {
+        removeElementClassIfExist(item, 'promo-item--active');
+    })
+};
+
+var slider = function (input, item) {
+    input.addEventListener('click', function (event) {
+        event.preventDefault();
+        flushSliderState();
+        item.classList.add('promo-item--active');
+        input.classList.add('promo-slider__input--checked');
+
+    })
+};
+
+slider(selfieInput, selfieItem);
+slider(fitnessTrackerInput, fitnessTrackerItem);
+slider(droneInput, droneItem);
 
 

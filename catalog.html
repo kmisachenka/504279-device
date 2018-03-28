@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/_style.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -114,32 +114,40 @@
                 <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                     <span class="filter-main">Фильтр:</span>
                     <div class="filter-price">
-                        <label for="price" class="filter-label">Стоимость</label>
-                        <input id="price" name="price" type="range" class="filter-input filter-input__range" min="0" max="10000" step="10" value="5000" multiple>
-                        <output for="price" class="filter-price__output">От 0</output>
-                        <output for="price" class="filter-price__output">До 5000</output>
+                        <label class="filter-label">Стоимость</label>
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="range-toggle range-toggle-min">
+                                <div class="toggle-output">от 0</div>
+                            </div>
+                            <div class="range-toggle range-toggle-max">
+                                <div class="toggle-output">до 5000</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="filter-color">
                         <span class="filter-label">Цвет</span>
                         <ul class="filter-list">
                             <li class="filter-option">
-                                <input id="filter-black" name="black" type="checkbox" class="filter-input filter-input__checkbox" checked>
+                                <input id="filter-black" name="black" type="checkbox" class="visually-hidden filter-input filter-input__checkbox" checked>
                                 <label for="filter-black" class="filter-option__label">Черный</label>
                             </li>
                             <li class="filter-option">
-                                <input id="filter-white" name="white" type="checkbox" class="filter-input filter-input__checkbox">
+                                <input id="filter-white" name="white" type="checkbox" class="visually-hidden filter-input filter-input__checkbox">
                                 <label for="filter-white" class="filter-option__label">Белый</label>
                             </li>
                             <li class="filter-option">
-                                <input id="filter-blue" name="blue" type="checkbox" class="filter-input filter-input__checkbox" checked>
+                                <input id="filter-blue" name="blue" type="checkbox" class="visually-hidden filter-input filter-input__checkbox" checked>
                                 <label for="filter-blue" class="filter-option__label">Синий</label>
                             </li>
                             <li class="filter-option">
-                                <input id="filter-red" name="red" type="checkbox" class="filter-input filter-input__checkbox" checked>
+                                <input id="filter-red" name="red" type="checkbox" class="visually-hidden filter-input filter-input__checkbox" checked>
                                 <label for="filter-red" class="filter-option__label">Красный</label>
                             </li>
                             <li class="filter-option">
-                                <input id="filter-pink" name="pink" type="checkbox" class="filter-input filter-input__checkbox">
+                                <input id="filter-pink" name="pink" type="checkbox" class="visually-hidden filter-input filter-input__checkbox">
                                 <label for="filter-pink" class="filter-option__label">Розовый</label>
                             </li>
                         </ul>
@@ -148,11 +156,11 @@
                         <span class="filter-label">Bluetooth</span>
                         <ul class="filter-list">
                             <li class="filter-option">
-                                <input id="filter-bluetooth-yes"  value="yes" class="filter-input filter-input__radio" name="bluetooth" type="radio" checked>
+                                <input id="filter-bluetooth-yes"  value="yes" class="visually-hidden filter-input filter-input__radio" name="bluetooth" type="radio" checked>
                                 <label for="filter-bluetooth-yes" class="filter-option__label">Есть</label>
                             </li>
                             <li class="filter-option">
-                                <input id="filter-bluetooth-no" value="no" class="filter-input filter-input__radio" name="bluetooth" type="radio">
+                                <input id="filter-bluetooth-no" value="no" class="visually-hidden filter-input filter-input__radio" name="bluetooth" type="radio">
                                 <label for="filter-bluetooth-no" class="filter-option__label">Нет</label>
                             </li>
                         </ul>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/_style.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -44,7 +44,7 @@
         <div class="header-wrapper-menu">
             <nav class="site-nav">
                 <ul class="site-nav__items">
-                    <li class="site-nav__item drop">
+                    <li class="site-nav__item">
                         <a class="link catalog-link" href="catalog.html">Каталог товаров</a>
                         <ul class="dropdown">
                             <li class="dropdown-item">
@@ -102,8 +102,18 @@
     <section class="promo">
         <h2 class="visually-hidden">Промо-товары</h2>
 
+        <div class="promo-slider">
+            <input id="selfie" type="radio" name="slider_control" value="selfie" class="promo-slider__input visually-hidden">
+            <label for="selfie" class="promo-slider__label">Первый слайд</label>
 
-        <div class="promo-item" style="display: none">
+            <input id="fitness-tracker" type="radio" name="slider_control" value="fitness-tracker" class="promo-slider__input visually-hidden">
+            <label for="fitness-tracker" class="promo-slider__label">Второй слайд</label>
+
+            <input id="drone" type="radio" name="slider_control " value="drone" class="promo-slider__input visually-hidden">
+            <label for="drone" class="promo-slider__label">Третий слайд</label>
+        </div>
+
+        <div class="promo-item promo-selfie promo-item--active">
             <h3 class="visually-hidden">Селфи-палка</h3>
             <div class="promo-image-wrapper">
                 <img class="promo-image promo-image--selfie-stick" src="img/slider-1.png" height="486" width="384"
@@ -118,12 +128,7 @@
                 </div>
                 <div class="promo-controls">
                     <a href="#" class="promo-button button">Подробнее</a>
-                    <div class="promo-radio">
-                        <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control"
-                               checked>
-                        <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control">
-                        <input type="radio" name="slider_control" value="slider-3" class="slider-controls__control">
-                    </div>
+
                 </div>
                 <div class="promo-table">
                     <div class="table">
@@ -143,7 +148,7 @@
         </div>
 
 
-        <div class="promo-item" style="display: none;">
+        <div class="promo-item promo-fitness-tracker">
             <h3 class="visually-hidden">Фитнес-браслет</h3>
             <div class="promo-image-wrapper">
                 <img class="promo-image promo-image--fitness-tracker" src="img/slider-2.png" height="485" width="345"
@@ -158,12 +163,7 @@
                 </div>
                 <div class="promo-controls">
                     <a href="#" class="promo-button button">Подробнее</a>
-                    <div class="promo-radio">
-                        <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">
-                        <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control"
-                               checked>
-                        <input type="radio" name="slider_control" value="slider-3" class="slider-controls__control">
-                    </div>
+
                 </div>
                 <div class="promo-table">
                     <div class="table">
@@ -179,7 +179,7 @@
             </div>
         </div>
 
-        <div class="promo-item">
+        <div class="promo-item promo-drone">
             <h3 class="visually-hidden">Квадрокоптер</h3>
             <div class="promo-image-wrapper">
                 <img class="promo-image promo-image--drone" src="img/slider-3.png" height="334" width="526"
@@ -194,12 +194,7 @@
                 </div>
                 <div class="promo-controls">
                     <a href="#" class="button promo-button">Подробнее</a>
-                    <div class="promo-radio">
-                        <input type="radio" name="slider_control" value="slider-1" class="slider-controls__control">
-                        <input type="radio" name="slider_control" value="slider-2" class="slider-controls__control">
-                        <input type="radio" name="slider_control" value="slider-3" class="slider-controls__control"
-                               checked>
-                    </div>
+
                 </div>
                 <div class="promo-table">
                     <div class="table">
@@ -283,15 +278,15 @@
             <h2 class="visually-hidden">Сервисы</h2>
             <div class="services-wrapper">
                 <div class="services-controls">
-                    <label class="button delivery services-button--active">
+                    <label class="button button--disable-transition delivery services-button--active">
                         <span>Доставка</span>
                         <input type="radio" name="services-radio" class="services-input visually-hidden" checked>
                     </label>
-                    <label class="button warranty">
+                    <label class="button button--disable-transition warranty">
                         <span>Гарантия</span>
                         <input type="radio" name="services-radio" class="services-input visually-hidden">
                     </label>
-                    <label class="button credit">
+                    <label class="button button--disable-transition credit">
                         <span>Кредит</span>
                         <input type="radio" name="services-radio" class="services-input visually-hidden">
                     </label>
