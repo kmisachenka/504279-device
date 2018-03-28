@@ -1699,6 +1699,8 @@ body {
     cursor: pointer
 }
 
+
+
 .filter-input__checkbox + .filter-option__label::before {
     position: absolute;
     content: '';
@@ -1745,6 +1747,15 @@ body {
     background-image: url('../img/radio-on.svg');
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+.filter-input:not(:disabled):not(:checked):hover + .filter-option__label:before,
+.filter-input:checked:hover + .filter-option__label:before {
+    opacity: .6;
+}
+
+.filter-input:disabled + .filter-option__label::before {
+    opacity: .25;
 }
 
 .catalog-sort__label {
