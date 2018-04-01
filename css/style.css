@@ -1159,6 +1159,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    min-width: 460px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
