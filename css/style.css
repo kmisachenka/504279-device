@@ -477,7 +477,9 @@ body {
 }
 
 .service-item--logout {
+    opacity: .3;
     margin-left: 10px;
+
 }
 
 .service-item__link:hover {
