@@ -598,7 +598,7 @@ body {
 }
 
 .promo-image-wrapper {
-    position: relative;
+    display: block;
 }
 
 .promo-image {
