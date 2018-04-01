@@ -38,7 +38,7 @@ var hideModal = function (modal) {
 };
 
 var clearInputs = function () {
-    for (var i = 0; inputs.length > 0; i++) {
+    for (var i = 0; i < inputs.length; i++) {
         if (inputs[i].value) {
             inputs[i].value = '';
         }
