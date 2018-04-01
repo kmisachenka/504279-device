@@ -462,6 +462,10 @@ body {
     background-size: 16px 16px;
 }
 
+.service-item__link--without-icon::before {
+    display: none;
+}
+
 .service-item--login::before {
     background-image: url('../img/user.svg');
 }
@@ -2059,6 +2063,14 @@ body {
 
     font-size: 14px;
     line-height: 40px;;
+}
+
+.filter-input__checkbox:focus + .filter-option__label,
+.filter-input__radio:focus + .filter-option__label{
+    outline-color: rgb(77, 144, 254);
+    outline-offset: -5px;
+    outline-style: auto;
+    outline-width: 5px;
 }
 
 .filter-input__checkbox + .filter-option__label::before {
