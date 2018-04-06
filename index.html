@@ -102,20 +102,6 @@
     <section class="promo">
         <h2 class="visually-hidden">Промо-товары</h2>
 
-        <div class="promo-slider">
-            <input id="selfie" type="radio" name="slider_control" value="selfie"
-                   class="promo-slider__input visually-hidden">
-            <label for="selfie" class="promo-slider__label">Первый слайд</label>
-
-            <input id="fitness-tracker" type="radio" name="slider_control" value="fitness-tracker"
-                   class="promo-slider__input visually-hidden">
-            <label for="fitness-tracker" class="promo-slider__label">Второй слайд</label>
-
-            <input id="drone" type="radio" name="slider_control " value="drone"
-                   class="promo-slider__input visually-hidden">
-            <label for="drone" class="promo-slider__label">Третий слайд</label>
-        </div>
-
         <div class="promo-item promo-selfie promo-item--active">
             <h3 class="visually-hidden">Селфи-палка</h3>
             <div class="promo-image-wrapper">
@@ -131,7 +117,19 @@
                 </div>
                 <div class="promo-controls">
                     <a href="#" class="promo-button button">Подробнее</a>
+                    <div class="promo-slider">
+                        <input id="selfie-1" type="radio" name="slider_control" value="selfie"
+                               class="promo-slider__input promo-slider__input--selfie visually-hidden">
+                        <label for="selfie-1" class="promo-slider__label">Первый слайд</label>
 
+                        <input id="fitness-tracker-1" type="radio" name="slider_control" value="fitness-tracker"
+                               class="promo-slider__input promo-slider__input--fitness-tracker visually-hidden">
+                        <label for="fitness-tracker-1" class="promo-slider__label">Второй слайд</label>
+
+                        <input id="drone-1" type="radio" name="slider_control" value="drone"
+                               class="promo-slider__input promo-slider__input--drone visually-hidden">
+                        <label for="drone-1" class="promo-slider__label">Третий слайд</label>
+                    </div>
                 </div>
                 <div class="promo-table">
                     <div class="table">
@@ -166,7 +164,19 @@
                 </div>
                 <div class="promo-controls">
                     <a href="#" class="promo-button button">Подробнее</a>
+                    <div class="promo-slider">
+                        <input id="selfie-2" type="radio" name="slider_control" value="selfie"
+                               class="promo-slider__input promo-slider__input--selfie visually-hidden">
+                        <label for="selfie-2" class="promo-slider__label">Первый слайд</label>
 
+                        <input id="fitness-tracker-2" type="radio" name="slider_control" value="fitness-tracker"
+                               class="promo-slider__input promo-slider__input--fitness-tracker visually-hidden">
+                        <label for="fitness-tracker-2" class="promo-slider__label">Второй слайд</label>
+
+                        <input id="drone-2" type="radio" name="slider_control" value="drone"
+                               class="promo-slider__input promo-slider__input--drone visually-hidden">
+                        <label for="drone-2" class="promo-slider__label">Третий слайд</label>
+                    </div>
                 </div>
                 <div class="promo-table">
                     <div class="table">
@@ -197,7 +207,19 @@
                 </div>
                 <div class="promo-controls">
                     <a href="#" class="button promo-button">Подробнее</a>
+                    <div class="promo-slider">
+                        <input id="selfie-3" type="radio" name="slider_control" value="selfie"
+                               class="promo-slider__input promo-slider__input--selfie visually-hidden">
+                        <label for="selfie-3" class="promo-slider__label">Первый слайд</label>
 
+                        <input id="fitness-tracker-3" type="radio" name="slider_control" value="fitness-tracker"
+                               class="promo-slider__input promo-slider__input--fitness-tracker visually-hidden">
+                        <label for="fitness-tracker-3" class="promo-slider__label">Второй слайд</label>
+
+                        <input id="drone-3" type="radio" name="slider_control" value="drone"
+                               class="promo-slider__input promo-slider__input--drone visually-hidden">
+                        <label for="drone-3" class="promo-slider__label">Третий слайд</label>
+                    </div>
                 </div>
                 <div class="promo-table">
                     <div class="table">
@@ -388,8 +410,11 @@
                     <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
                         проверить
                         работоспособность покупки. Всякое бывает.</p>
-                    <img src="img/map.jpg" class="contacts-map" alt="Карта офиса по адресу улица Строителей, 15"
-                         height="222" width="560">
+                    <div class="map">
+                        <iframe class="contacts-frame" src="https://yandex.com/map-widget/v1/-/CBetjAD68B" width="560" height="222"></iframe>
+                        <img src="img/map.jpg" class="contacts-map" alt="Карта офиса по адресу улица Строителей, 15"
+                             height="222" width="560">
+                    </div>
                     <a href="#" class="button contacts-link more-about-us">Напишите нам</a>
                 </div>
             </div>

@@ -147,38 +147,63 @@ activateButtonOnClick(creditButton, creditItem);
 
 /* Основной слайдер */
 
-var selfieInput = document.querySelector('#selfie');
-var selfieItem = document.querySelector('.promo-selfie');
-
+var selfieInput = document.querySelector('.promo-slider__input--selfie');
 selfieInput.classList.add('promo-slider__input--checked');
 
-var fitnessTrackerInput = document.querySelector('#fitness-tracker');
-var fitnessTrackerItem = document.querySelector('.promo-fitness-tracker');
-
-var droneInput = document.querySelector('#drone');
-var droneItem = document.querySelector('.promo-drone');
-
 var flushSliderState = function () {
-    [selfieInput, fitnessTrackerInput, droneInput].map(function (input) {
-        removeElementClassIfExist(input, 'promo-slider__input--checked');
-    });
-    [selfieItem, fitnessTrackerItem, droneItem].map(function (item) {
-        removeElementClassIfExist(item, 'promo-item--active');
-    })
+    var inputs = document.querySelectorAll('.promo-item--active .promo-slider__input');
+    for (var i = 0; i < inputs.length; i++) {
+        removeElementClassIfExist(inputs[i], 'promo-slider__input--checked');
+    }
+
+    var items = document.querySelectorAll('.promo-item');
+    for (var j = 0; j < items.length; j++) {
+        removeElementClassIfExist(items[j], 'promo-item--active');
+    }
 };
 
-var slider = function (input, item) {
-    input.addEventListener('click', function (event) {
+
+var slider = function () {
+    var activeItem = document.querySelector('.promo-item--active');
+
+    var selfieInput = activeItem.querySelector('.promo-slider__input--selfie');
+    var selfieItem = document.querySelector('.promo-selfie');
+
+    var fitnessTrackerInput = activeItem.querySelector('.promo-slider__input--fitness-tracker');
+    var fitnessTrackerItem = document.querySelector('.promo-fitness-tracker');
+
+    var droneInput = activeItem.querySelector('.promo-slider__input--drone');
+    var droneItem = document.querySelector('.promo-drone');
+
+    selfieInput.addEventListener('click', function (event) {
         event.preventDefault();
         flushSliderState();
-        item.classList.add('promo-item--active');
+        selfieItem.classList.add('promo-item--active');
+        activeItem = document.querySelector('.promo-item--active');
+        var input = activeItem.querySelector('.promo-slider__input--selfie');
         input.classList.add('promo-slider__input--checked');
+        slider();
+    });
 
-    })
+    fitnessTrackerInput.addEventListener('click', function (event) {
+        event.preventDefault();
+        flushSliderState();
+        fitnessTrackerItem.classList.add('promo-item--active');
+        activeItem = document.querySelector('.promo-item--active');
+        var input = activeItem.querySelector('.promo-slider__input--fitness-tracker');
+        input.classList.add('promo-slider__input--checked');
+        slider();
+    });
+
+    droneInput.addEventListener('click', function (event) {
+        event.preventDefault();
+        flushSliderState();
+        droneItem.classList.add('promo-item--active');
+        activeItem = document.querySelector('.promo-item--active');
+        var input = activeItem.querySelector('.promo-slider__input--drone');
+        input.classList.add('promo-slider__input--checked');
+        slider();
+    });
 };
 
-slider(selfieInput, selfieItem);
-slider(fitnessTrackerInput, fitnessTrackerItem);
-slider(droneInput, droneItem);
-
-
+slider();
